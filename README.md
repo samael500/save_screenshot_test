@@ -1,4 +1,15 @@
 # save_screenshot_test
+
+- [x] firefox latest
+- [ ] google chrome latest
+- [ ] chromium
+- [ ] splash http://splash.readthedocs.org/en/latest/
+- [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
+- [ ] zombie.js https://github.com/ryanpetrello/python-zombie
+- [ ] PantomJS http://phantomjs.org/
+- [ ] http://awesomium.com/
+- [ ] http://slimerjs.org/
+
 test save screenshot in selenium
 
 - firefox version: `36.0.1`
