@@ -247,16 +247,16 @@
             legends();
             // memory minimal usage
             var memory_min = document.getElementById("canvas-memory_min").getContext("2d");
-            window.myLine = new Chart(memory_min).Line(memory_min_data);
+            window.myLine = new Chart(memory_min).Line(memory_min_data, {bezierCurve: false});
             // memory maximal usage
             var memory_max = document.getElementById("canvas-memory_max").getContext("2d");
-            window.myLine = new Chart(memory_max).Line(memory_max_data);
+            window.myLine = new Chart(memory_max).Line(memory_max_data, {bezierCurve: false});
             // memory avg usage
             var memory_avg = document.getElementById("canvas-memory_avg").getContext("2d");
-            window.myLine = new Chart(memory_avg).Line(memory_avg_data);
+            window.myLine = new Chart(memory_avg).Line(memory_avg_data, {bezierCurve: false});
             // time usage
             var time_usage = document.getElementById("canvas-time").getContext("2d");
-            window.myLine = new Chart(time_usage).Line(time_data);
+            window.myLine = new Chart(time_usage).Line(time_data, {bezierCurve: false});
         }
     </script>
 </body>

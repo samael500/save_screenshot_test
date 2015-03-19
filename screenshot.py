@@ -1,6 +1,7 @@
+from settings import URL_LIST, RES_LIST, ATTEMPTS
 from selenium import webdriver
 from memory_profiler import memory_usage
-from settings import URL_LIST, RES_LIST, ATTEMPTS
+from xvfbwrapper import Xvfb
 
 import time
 import os
@@ -95,6 +96,11 @@ def get_browser(name):
     return driver, bin, path, name
 
 if __name__ == '__main__':
+    vdisplay = Xvfb()
+    vdisplay.start()
+    # test browsers
     test_browser(*get_browser('phantomjs'))
     time.sleep(30)
     test_browser(*get_browser('firefox'))
+
+    vdisplay.stop()
