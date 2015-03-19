@@ -8,16 +8,7 @@
 <body>
     <h2>Legend</h2>
     <div>
-        <ul>
-            <li class="firefox" />
-            <li class="g_chrome" />
-            <li class="chromium" />
-            <li class="splash" />
-            <li class="ghost" />
-            <li class="zombie" />
-            <li class="phantomjs" />
-            <li class="awesomium" />
-            <li class="slimerjs" />
+        <ul class="browsers">
         </ul>
     </div>
 
@@ -38,18 +29,7 @@
         <canvas id="canvas-time"></canvas>
     </div>
 
-<!-- 
--  firefox последний
--  google chrome последний
--  chromium
--  splash http://splash.readthedocs.org/en/latest/
--  ghost.py http://ghost-py.readthedocs.org/en/latest/
--  zombie.js https://github.com/ryanpetrello/python-zombie
--  PantomJS http://phantomjs.org/
--  http://awesomium.com/
--  http://slimerjs.org/
 
- -->
     <script>
         var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
@@ -151,82 +131,82 @@
         var fox_max_mem = $.extend({}, FIREFOX);
         var fox_avg_mem = $.extend({}, FIREFOX);
         var fox_time = $.extend({}, FIREFOX);
-        fox_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        fox_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        fox_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        fox_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        fox_min_mem['data'] = [{{ fox_min_mem }}];
+        fox_max_mem['data'] = [{{ fox_max_mem }}];
+        fox_avg_mem['data'] = [{{ fox_avg_mem }}];
+        fox_time['data'] = [{{ fox_time }}];
 
         var g_chrome_min_mem = $.extend({}, G_CHROME);
         var g_chrome_max_mem = $.extend({}, G_CHROME);
         var g_chrome_avg_mem = $.extend({}, G_CHROME);
         var g_chrome_time = $.extend({}, G_CHROME);
-        g_chrome_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        g_chrome_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        g_chrome_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        g_chrome_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        g_chrome_min_mem['data'] = [{{ g_chrome_min_mem }}];
+        g_chrome_max_mem['data'] = [{{ g_chrome_max_mem }}];
+        g_chrome_avg_mem['data'] = [{{ g_chrome_avg_mem }}];
+        g_chrome_time['data'] = [{{ g_chrome_time }}];
 
         var chromium_min_mem = $.extend({}, CHROMIUM);
         var chromium_max_mem = $.extend({}, CHROMIUM);
         var chromium_avg_mem = $.extend({}, CHROMIUM);
         var chromium_time = $.extend({}, CHROMIUM);
-        chromium_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        chromium_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        chromium_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        chromium_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        chromium_min_mem['data'] = [{{ chromium_min_mem }}];
+        chromium_max_mem['data'] = [{{ chromium_max_mem }}];
+        chromium_avg_mem['data'] = [{{ chromium_avg_mem }}];
+        chromium_time['data'] = [{{ chromium_time }}];
 
         var splash_min_mem = $.extend({}, SPLASH);
         var splash_max_mem = $.extend({}, SPLASH);
         var splash_avg_mem = $.extend({}, SPLASH);
         var splash_time = $.extend({}, SPLASH);
-        splash_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        splash_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        splash_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        splash_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        splash_min_mem['data'] = [{{ splash_min_mem }}];
+        splash_max_mem['data'] = [{{ splash_max_mem }}];
+        splash_avg_mem['data'] = [{{ splash_avg_mem }}];
+        splash_time['data'] = [{{ splash_time }}];
 
         var ghost_min_mem = $.extend({}, GHOST);
         var ghost_max_mem = $.extend({}, GHOST);
         var ghost_avg_mem = $.extend({}, GHOST);
         var ghost_time = $.extend({}, GHOST);
-        ghost_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        ghost_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        ghost_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        ghost_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        ghost_min_mem['data'] = [{{ ghost_min_mem }}];
+        ghost_max_mem['data'] = [{{ ghost_max_mem }}];
+        ghost_avg_mem['data'] = [{{ ghost_avg_mem }}];
+        ghost_time['data'] = [{{ ghost_time }}];
 
         var zombie_min_mem = $.extend({}, ZOMBIE);
         var zombie_max_mem = $.extend({}, ZOMBIE);
         var zombie_avg_mem = $.extend({}, ZOMBIE);
         var zombie_time = $.extend({}, ZOMBIE);
-        zombie_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        zombie_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        zombie_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        zombie_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        zombie_min_mem['data'] = [{{ zombie_min_mem }}];
+        zombie_max_mem['data'] = [{{ zombie_max_mem }}];
+        zombie_avg_mem['data'] = [{{ zombie_avg_mem }}];
+        zombie_time['data'] = [{{ zombie_time }}];
 
         var pantom_min_mem = $.extend({}, PHANTOMJS);
         var pantom_max_mem = $.extend({}, PHANTOMJS);
         var pantom_avg_mem = $.extend({}, PHANTOMJS);
         var pantom_time = $.extend({}, PHANTOMJS);
-        pantom_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        pantom_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        pantom_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        pantom_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        pantom_min_mem['data'] = [{{ phantomjs_min_mem }}];
+        pantom_max_mem['data'] = [{{ phantomjs_max_mem }}];
+        pantom_avg_mem['data'] = [{{ phantomjs_avg_mem }}];
+        pantom_time['data'] = [{{ phantomjs_time }}];
 
         var awesomium_min_mem = $.extend({}, AWESOMIUM);
         var awesomium_max_mem = $.extend({}, AWESOMIUM);
         var awesomium_avg_mem = $.extend({}, AWESOMIUM);
         var awesomium_time = $.extend({}, AWESOMIUM);
-        awesomium_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        awesomium_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        awesomium_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        awesomium_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        awesomium_min_mem['data'] = [{{ awesomium_min_mem }}];
+        awesomium_max_mem['data'] = [{{ awesomium_max_mem }}];
+        awesomium_avg_mem['data'] = [{{ awesomium_avg_mem }}];
+        awesomium_time['data'] = [{{ awesomium_time }}];
 
         var slimerjs_min_mem = $.extend({}, SLIMERJS);
         var slimerjs_max_mem = $.extend({}, SLIMERJS);
         var slimerjs_avg_mem = $.extend({}, SLIMERJS);
         var slimerjs_time = $.extend({}, SLIMERJS);
-        slimerjs_min_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        slimerjs_max_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        slimerjs_avg_mem['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
-        slimerjs_time['data'] = [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()];
+        slimerjs_min_mem['data'] = [{{ slimerjs_min_mem }}];
+        slimerjs_max_mem['data'] = [{{ slimerjs_max_mem }}];
+        slimerjs_avg_mem['data'] = [{{ slimerjs_avg_mem }}];
+        slimerjs_time['data'] = [{{ slimerjs_time }}];
 
         var memory_min_data = {
             labels : LABELS,
@@ -257,6 +237,7 @@
         var legends = function() {
             for (index in browsers){
                 var browser = browsers[index];
+                $('ul.browsers').append('<li class={class} />'.replace('{class}', browser['label']));
                 var li = $('li.{class}'.replace('{class}', browser['label']));
                 li.html('<span style="color:{color}"><strong>{text}</strong></span>'.replace(
                     '{color}', browser['strokeColor']).replace('{text}', browser['label'].toUpperCase()));
