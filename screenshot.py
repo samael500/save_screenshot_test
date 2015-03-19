@@ -14,20 +14,23 @@ def save_shot(url, width, browser, save_as):
     browser.get(url)
     browser.save_screenshot(save_as)
 
-def test_browser(browser):
+def test_browser(Browser):
     """ for each site, for each screen """
+    # base path
+    browser = Browser()
     base_path = os.path.join('img', browser.name)
     if not os.path.exists(base_path):
         os.makedirs(base_path)
+    browser.quit()
 
     for url in URL_LIST:
         for res in RES_LIST:
             save_as = get_img_name(base_path, url, res)
+            # create rowser and save img
+            browser = Browser()
             save_shot(url, res, browser, save_as)
-
-    browser.quit()
+            browser.quit()
 
 
 if __name__ == '__main__':
-    browser = webdriver.Firefox()
-    test_browser(browser)
+    test_browser(webdriver.Firefox)
