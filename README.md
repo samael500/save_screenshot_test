@@ -6,9 +6,9 @@
 - [ ] splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
 - [ ] zombie.js https://github.com/ryanpetrello/python-zombie
-- [ ] PantomJS http://phantomjs.org/
-- [ ] http://awesomium.com/
-- [ ] http://slimerjs.org/
+- [x] PantomJS http://phantomjs.org/
+- [ ] Awesomium http://awesomium.com/
+- [ ] SlimerJs http://slimerjs.org/
 
 test save screenshot in selenium
 
