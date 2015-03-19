@@ -33,9 +33,7 @@
     <script>
         var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
-        var LABELS = ["January","February","March","April","May","June","July"];
-        var legend_template = "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-
+        var LABELS = [{{ labels }}];
 
         var FIREFOX = {
             label: "firefox",
