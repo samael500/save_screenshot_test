@@ -3,3 +3,4 @@ memory_profiler==0.32
 psutil==2.2.1
 splash==1.5
 PySide==1.2.2
+Jinja2==2.7.3

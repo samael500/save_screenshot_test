@@ -1,12 +1,9 @@
 from selenium import webdriver
 from memory_profiler import memory_usage
-import os
+from settings import URL_LIST, RES_LIST, ATTEMPTS
+
 import time
-
-
-URL_LIST = ('http://google.com/', 'https://www.facebook.com/', 'http://habrahabr.ru/', 'http://wbtech.pro/', )
-RES_LIST = (240, 780, 1320, 1920)
-ATTEMPTS = 10
+import os
 
 get_img_name = lambda base_path, url, res: '{base_path}/{url}-{res}px.png'.format(
     base_path=base_path, url=url.replace('http:', '').replace('https:', '').replace('/', ''), res=res)
@@ -37,7 +34,7 @@ def _report(log_path, save_as, mins, maxs, avgs, times):
         report.write('time: {value}\n'.format(value=avg(times)))
         report.write('\n')
     with open(log_path + '-min.log', 'a') as report:
-        report.write('{0};{1};{2};{3}\n'.format(min(mins), max(maxs), avg(avgs), avg(times)))
+        report.write('{0};{1};{2};{3};\n'.format(min(mins), max(maxs), avg(avgs), avg(times)))
 
 def _report_path(browser_name):
     # base path
