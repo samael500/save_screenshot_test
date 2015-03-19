@@ -42,7 +42,7 @@ def _report(log_path, save_as, mins, maxs, avgs, times):
 def _report_path(browser_name):
     # base path
     base_path = os.path.join('img', browser_name)
-    log_path = os.path.join('log')
+    log_path = os.path.join('report_log')
     if not os.path.exists(base_path):
         os.makedirs(base_path)
     if not os.path.exists(log_path):
