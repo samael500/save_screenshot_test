@@ -21,37 +21,45 @@ def save_shot(url, width, browser, save_as):
     browser.save_screenshot(save_as)
 
 
-def _test_browser(Browser, url, res, save_as):
+def _test_browser(Browser, binary, path, url, res, save_as):
     """ create rowser and save img """
-    browser = Browser()
+    browser = Browser(**binary) if binary else Browser(path)
     save_shot(url, res, browser, save_as)
     browser.quit()
 
-def _report(browser_name, save_as, mins, maxs, avgs, times):
+def _report(log_path, save_as, mins, maxs, avgs, times):
     # make report
-    with open(browser_name + '.log', 'a') as report:
+    with open(log_path + '.log', 'a') as report:
         report.write(save_as + '\n')
         report.write('min: {value}\n'.format(value=min(mins)))
         report.write('max: {value}\n'.format(value=max(maxs)))
         report.write('avg: {value}\n'.format(value=avg(avgs)))
         report.write('time: {value}\n'.format(value=avg(times)))
         report.write('\n')
-    with open(browser_name + '-min.log', 'a') as report:
+    with open(log_path + '-min.log', 'a') as report:
         report.write('{0};{1};{2};{3}\n'.format(min(mins), max(maxs), avg(avgs), avg(times)))
 
-def test_browser(Browser, browser_name):
-    """ for each site, for each screen """
+def _report_path(browser_name):
     # base path
     base_path = os.path.join('img', browser_name)
+    log_path = os.path.join('log')
     if not os.path.exists(base_path):
         os.makedirs(base_path)
+    if not os.path.exists(log_path):
+        os.makedirs(log_path)
 
+    log_path = os.path.join('log', browser_name)
     # clear report
-    with open(browser_name + '.log', 'w') as report:
+    with open(log_path + '.log', 'w') as report:
         report.write('')
-    with open(browser_name + '-min.log', 'w') as report:
+    with open(log_path + '-min.log', 'w') as report:
         report.write('')
+    return base_path, log_path
 
+
+def test_browser(Browser, binary, path, browser_name):
+    """ for each site, for each screen """
+    base_path, log_path = _report_path(browser_name)
     for url in URL_LIST:
         for res in RES_LIST:
             save_as = get_img_name(base_path, url, res)
@@ -61,14 +69,35 @@ def test_browser(Browser, browser_name):
             times = []
             for i in xrange(ATTEMPTS):
                 start = time.time()
-                memory = memory_usage((_test_browser, (Browser, url, res, save_as)))
+                memory = memory_usage((_test_browser, (Browser, binary, path, url, res, save_as)))
                 end = time.time()
                 mins.append(min(memory))
                 maxs.append(max(memory))
                 avgs.append(avg(memory))
                 times.append(end - start)
-            _report(browser_name, save_as, mins, maxs, avgs, times)
+            _report(log_path, save_as, mins, maxs, avgs, times)
 
+def get_browser(name):
+    """ Get browser webdriver """
+    path = bin = None
+    if name is 'firefox':
+        from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+        binary = FirefoxBinary('bin/firefox/firefox-bin')
+        driver = webdriver.Firefox
+        bin = dict(firefox_binary=binary)
+    elif name is 'chrome':
+        assert False
+    elif name is 'chromium':
+        assert False
+    elif name is 'splash':
+        assert False
+    elif name is 'phantomjs':
+        driver = webdriver.PhantomJS
+        path = 'bin/phantomjs-1.9.8-linux-x86_64/bin/phantomjs'
+
+    return driver, bin, path, name
 
 if __name__ == '__main__':
-    test_browser(webdriver.Firefox, 'firefox')
+    test_browser(*get_browser('phantomjs'))
+    time.sleep(30)
+    test_browser(*get_browser('firefox'))

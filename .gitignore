@@ -55,3 +55,4 @@ target/
 
 ### Custom ###
 venv/
+bin/
