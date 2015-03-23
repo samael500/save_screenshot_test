@@ -1,0 +1,96 @@
+img/firefox/google.com-240px.png
+min: 15.66796875
+max: 18.36328125
+avg: 17.4341476537
+time: 10.4909843445
+
+img/firefox/google.com-780px.png
+min: 17.01953125
+max: 18.9375
+avg: 17.8066113931
+time: 9.67122159004
+
+img/firefox/google.com-1320px.png
+min: 17.48046875
+max: 18.7421875
+avg: 17.6214697912
+time: 9.75194811821
+
+img/firefox/google.com-1920px.png
+min: 17.6796875
+max: 18.80859375
+avg: 17.805820482
+time: 16.2619064093
+
+img/firefox/www.facebook.com-240px.png
+min: 17.56640625
+max: 19.01953125
+avg: 17.9557138387
+time: 9.18950295448
+
+img/firefox/www.facebook.com-780px.png
+min: 17.56640625
+max: 19.01953125
+avg: 17.9510977883
+time: 9.02913961411
+
+img/firefox/www.facebook.com-1320px.png
+min: 17.56640625
+max: 19.015625
+avg: 17.9513959171
+time: 8.6022680521
+
+img/firefox/www.facebook.com-1920px.png
+min: 17.6015625
+max: 19.140625
+avg: 18.0766129452
+time: 8.79239268303
+
+img/firefox/habrahabr.ru-240px.png
+min: 17.87890625
+max: 50.19140625
+avg: 23.5388190051
+time: 17.2881998301
+
+img/firefox/habrahabr.ru-780px.png
+min: 21.046875
+max: 52.1953125
+avg: 23.7077300125
+time: 15.5994784832
+
+img/firefox/habrahabr.ru-1320px.png
+min: 23.26953125
+max: 57.28515625
+avg: 25.4914278499
+time: 15.7449853659
+
+img/firefox/habrahabr.ru-1920px.png
+min: 21.98046875
+max: 63.44921875
+avg: 25.9889208656
+time: 17.2552280426
+
+img/firefox/wbtech.pro-240px.png
+min: 25.11328125
+max: 25.1171875
+avg: 25.1133603325
+time: 8.13257887363
+
+img/firefox/wbtech.pro-780px.png
+min: 25.11328125
+max: 25.12109375
+avg: 25.1133345032
+time: 9.3792014122
+
+img/firefox/wbtech.pro-1320px.png
+min: 25.11328125
+max: 25.12109375
+avg: 25.1133868685
+time: 9.64010539055
+
+img/firefox/wbtech.pro-1920px.png
+min: 25.11328125
+max: 25.1640625
+avg: 25.1189428831
+time: 7.87419931889
+

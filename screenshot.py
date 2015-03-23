@@ -2,7 +2,17 @@ from selenium_base import selenium_test_browser
 from splash_base import splash_test_browser
 import sys
 
-BROWSERS = ('firefox', 'chrome', 'chromium', 'splash', 'ghost', 'zombie', 'phantomjs', 'awesomium', 'slimerjs', )
+BROWSERS = (
+    'firefox',      # +
+    'chrome',       # 0
+    'chromium',     # 0
+    'splash',       # -
+    'ghost',        # 0
+    'zombie',       # 0
+    'phantomjs',    # -
+    'awesomium',    # 0
+    'slimerjs',     # 0
+)
 SELENIUM = ('firefox', 
     #'chrome', 'chromium', 'splash', 'ghost', 'zombie',
     'phantomjs',

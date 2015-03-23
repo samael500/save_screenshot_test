@@ -13,11 +13,18 @@
 test save screenshot in selenium
 
 - firefox version: `36.0.1`
+    - медленно
+    - хорошие изображения
 - g_chrome version: ``
 - chromium version: ``
 - splash version: `1.5`
+    - быстро
+    - не маштабирует изображения - ширина влияет только на размер результата
+    - работает отдельно, возможно требует больше памяти чем выявил тест
 - ghost version: ``
 - zombie version: ``
 - phantomjs version: `1.9.8`
+    - быстро
+    - "старый" гугл
 - awesomium version: ``
 - slimerjs version: ``

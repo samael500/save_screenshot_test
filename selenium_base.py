@@ -1,5 +1,5 @@
 from selenium import webdriver
-from xvfbwrapper import Xvfb
+from pyvirtualdisplay import Display
 from helpers import test_browser
 
 
@@ -12,14 +12,11 @@ def save_shot(url, width, browser, save_as):
 def vdisplay_test_browser(Browser, url, res, save_as, param):
     """ create rowser and save img """
     # virtual display
-    vdisplay = Xvfb()
-    vdisplay.start()
-    # create browser
-    browser = Browser(**param)
-    save_shot(url, res, browser, save_as)
-    # close browser and display
-    browser.quit()
-    vdisplay.stop()
+    display_params = dict(visible=0, size=(1024, 768), backend='xvfb')
+    with Display(**display_params):
+        browser = Browser(**param)
+        save_shot(url, res, browser, save_as)
+        browser.quit()
 
 def no_vdisplay_test_browser(Browser, url, res, save_as, param):
     """ create rowser and save img """
