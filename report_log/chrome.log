@@ -1,0 +1,96 @@
+img/chrome/google.com-240px.png
+min: 15.734375
+max: 16.203125
+avg: 16.101942108
+time: 7.2771761179
+
+img/chrome/google.com-780px.png
+min: 16.203125
+max: 16.37109375
+avg: 16.3014257409
+time: 7.08133022785
+
+img/chrome/google.com-1320px.png
+min: 16.24609375
+max: 16.3828125
+avg: 16.2862310583
+time: 6.34283227921
+
+img/chrome/google.com-1920px.png
+min: 16.3828125
+max: 16.51171875
+avg: 16.4543776267
+time: 6.51391403675
+
+img/chrome/www.facebook.com-240px.png
+min: 16.48046875
+max: 16.48046875
+avg: 16.48046875
+time: 5.18893258572
+
+img/chrome/www.facebook.com-780px.png
+min: 16.48046875
+max: 16.62890625
+avg: 16.613458319
+time: 5.70230493546
+
+img/chrome/www.facebook.com-1320px.png
+min: 16.62890625
+max: 17.296875
+avg: 16.7467300338
+time: 5.4175014019
+
+img/chrome/www.facebook.com-1920px.png
+min: 16.6875
+max: 18.06640625
+avg: 16.7682942008
+time: 5.41341087818
+
+img/chrome/habrahabr.ru-240px.png
+min: 16.703125
+max: 16.703125
+avg: 16.703125
+time: 5.42318713665
+
+img/chrome/habrahabr.ru-780px.png
+min: 16.703125
+max: 17.66015625
+avg: 17.4758246893
+time: 5.4295125246
+
+img/chrome/habrahabr.ru-1320px.png
+min: 16.7421875
+max: 18.2265625
+avg: 17.5020089059
+time: 5.17264809608
+
+img/chrome/habrahabr.ru-1920px.png
+min: 17.109375
+max: 18.32421875
+avg: 17.8426050591
+time: 5.49084811211
+
+img/chrome/wbtech.pro-240px.png
+min: 18.32421875
+max: 18.32421875
+avg: 18.32421875
+time: 5.21409077644
+
+img/chrome/wbtech.pro-780px.png
+min: 18.32421875
+max: 18.32421875
+avg: 18.32421875
+time: 4.69708769321
+
+img/chrome/wbtech.pro-1320px.png
+min: 18.32421875
+max: 18.32421875
+avg: 18.32421875
+time: 5.15656409264
+
+img/chrome/wbtech.pro-1920px.png
+min: 18.32421875
+max: 18.32421875
+avg: 18.32421875
+time: 4.84198124409
+

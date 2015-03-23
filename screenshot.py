@@ -14,8 +14,9 @@ BROWSERS = (
     'slimerjs',     # 0
 )
 
-SELENIUM = ('firefox', 
-    #'chrome', 'chromium', 'splash', 'ghost',
+SELENIUM = (
+    'firefox', 'chrome',
+    # 'chromium', 'splash', 'ghost',
     'phantomjs',
     # 'awesomium', 'slimerjs',
 )

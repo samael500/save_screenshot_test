@@ -1,7 +1,7 @@
 # save_screenshot_test
 
 - [x] firefox latest
-- [ ] google chrome latest
+- [x] google chrome latest
 - [ ] chromium
 - [x] splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
@@ -15,7 +15,9 @@ test save screenshot in selenium
 - firefox version: `36.0.1`
     - медленно
     - хорошие изображения
-- g_chrome version: ``
+- g_chrome version: `40.0.2214.115`
+    - `chromedriver 2.14`
+    - обрезает видимую часть изображения http://stackoverflow.com/questions/17885169/selenium-chrome-driver-makes-screenshot-just-of-visible-part-of-page
 - chromium version: ``
 - splash version: `1.5`
     - быстро
@@ -27,5 +29,5 @@ test save screenshot in selenium
 - phantomjs version: `1.9.8`
     - быстро
     - "старый" гугл
-- awesomium version: ``
+- awesomium version: `1.7.5.0`
 - slimerjs version: ``

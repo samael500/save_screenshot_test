@@ -33,7 +33,9 @@ def selenium_test_browser(name):
         test_browser(driver, name, bin, vdisplay_test_browser)
 
     elif name == 'chrome':
-        assert False
+        driver = webdriver.Chrome
+        bin = dict(executable_path='bin/chromedriver')
+        test_browser(driver, name, bin, vdisplay_test_browser)
 
     elif name == 'chromium':
         assert False
