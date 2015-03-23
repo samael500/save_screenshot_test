@@ -57,3 +57,4 @@ target/
 venv/
 bin/
 !report_log/*
+node_modules/
