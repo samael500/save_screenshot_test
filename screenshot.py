@@ -13,13 +13,15 @@ BROWSERS = (
     'awesomium',    # 0
     'slimerjs',     # 0
 )
+
 SELENIUM = ('firefox', 
-    #'chrome', 'chromium', 'splash', 'ghost', 'zombie',
+    #'chrome', 'chromium', 'splash', 'ghost',
     'phantomjs',
     # 'awesomium', 'slimerjs',
 )
 
 SPLASH = ('splash', )
+ZOMBIE = ('zombie', )
 
 if __name__ == '__main__':
     name = sys.argv[1]
@@ -30,5 +32,7 @@ if __name__ == '__main__':
         selenium_test_browser(name)
     elif name in SPLASH:
         splash_test_browser(name)
+    elif name in ZOMBIE:
+        assert False
     else:
         assert False

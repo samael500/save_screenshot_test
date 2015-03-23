@@ -5,7 +5,7 @@
 - [ ] chromium
 - [x] splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
-- [ ] zombie.js https://github.com/ryanpetrello/python-zombie
+- [x] zombie.js https://github.com/ryanpetrello/python-zombie
 - [x] PantomJS http://phantomjs.org/
 - [ ] Awesomium http://awesomium.com/
 - [ ] SlimerJs http://slimerjs.org/
@@ -22,7 +22,8 @@ test save screenshot in selenium
     - не маштабирует изображения - ширина влияет только на размер результата
     - работает отдельно, возможно требует больше памяти чем выявил тест
 - ghost version: ``
-- zombie version: ``
+- zombie version: `0.2.0`
+    - не умеет делать скриншеты
 - phantomjs version: `1.9.8`
     - быстро
     - "старый" гугл

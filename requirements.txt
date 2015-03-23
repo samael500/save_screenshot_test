@@ -5,3 +5,4 @@ splash==1.5
 PySide==1.2.2
 Jinja2==2.7.3
 PyVirtualDisplay==0.1.5
+zombie==0.2.0
