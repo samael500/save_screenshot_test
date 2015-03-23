@@ -2,12 +2,12 @@
 
 - [x] firefox latest
 - [x] google chrome latest
-- [x] chromium
+- (x) chromium
 - [x] splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
 - [x] zombie.js https://github.com/ryanpetrello/python-zombie
 - [x] PantomJS http://phantomjs.org/
-- [ ] Awesomium http://awesomium.com/
+- (x) Awesomium http://awesomium.com/
 - [ ] SlimerJs http://slimerjs.org/
 
 test save screenshot in selenium
@@ -31,4 +31,5 @@ test save screenshot in selenium
     - быстро
     - "старый" гугл
 - awesomium version: `1.7.5.0`
+    - не нашел версии для питона, только C++ или .Net
 - slimerjs version: ``

@@ -41,9 +41,10 @@ def selenium_test_browser(name):
         assert False
 
     elif name == 'awesomium':
-        driver = webdriver.Chrome
-        bin = dict(executable_path='bin/chromedriver', binary='bin/awesomium_v1.7.5_sdk_linux64/bin/awesomium_process')
-        test_browser(driver, name, bin, no_vdisplay_test_browser)
+        assert False
+        # driver = webdriver.Chrome
+        # bin = dict(executable_path='bin/awesomium_v1.7.5_sdk_linux64/bin/awesomium_process')
+        # test_browser(driver, name, bin, no_vdisplay_test_browser)
 
     elif name == 'phantomjs':
         driver = webdriver.PhantomJS
