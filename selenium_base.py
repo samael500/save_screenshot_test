@@ -28,23 +28,23 @@ def no_vdisplay_test_browser(Browser, url, res, save_as, param):
     browser.quit()
 
 def selenium_test_browser(name):
-    if name is 'firefox':
+    if name == 'firefox':
         from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
         binary = FirefoxBinary('bin/firefox/firefox-bin')
         driver = webdriver.Firefox
         bin = dict(firefox_binary=binary)
         test_browser(driver, name, bin, vdisplay_test_browser)
 
-    elif name is 'chrome':
+    elif name == 'chrome':
         assert False
 
-    elif name is 'chromium':
+    elif name == 'chromium':
         assert False
 
-    elif name is 'splash':
+    elif name == 'splash':
         assert False
 
-    elif name is 'phantomjs':
+    elif name == 'phantomjs':
         driver = webdriver.PhantomJS
         path = 'bin/phantomjs-1.9.8-linux-x86_64/bin/phantomjs'
         test_browser(driver, name, path, no_vdisplay_test_browser)
