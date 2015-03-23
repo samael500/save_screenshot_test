@@ -2,7 +2,7 @@
 
 - [x] firefox latest
 - [x] google chrome latest
-- [ ] chromium
+- [x] chromium
 - [x] splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
 - [x] zombie.js https://github.com/ryanpetrello/python-zombie
@@ -18,7 +18,8 @@ test save screenshot in selenium
 - g_chrome version: `40.0.2214.115`
     - `chromedriver 2.14`
     - обрезает видимую часть изображения http://stackoverflow.com/questions/17885169/selenium-chrome-driver-makes-screenshot-just-of-visible-part-of-page
-- chromium version: ``
+- chromium version: `Not tested`
+    - требует хромдравйвер - получится обрезанный скриншет
 - splash version: `1.5`
     - быстро
     - не маштабирует изображения - ширина влияет только на размер результата

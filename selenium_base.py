@@ -20,7 +20,7 @@ def vdisplay_test_browser(Browser, url, res, save_as, param):
 
 def no_vdisplay_test_browser(Browser, url, res, save_as, param):
     """ create rowser and save img """
-    browser = Browser(param)
+    browser = Browser(**param) if isinstance(param, dict) else Browser(param)
     save_shot(url, res, browser, save_as)
     browser.quit()
 
@@ -40,8 +40,10 @@ def selenium_test_browser(name):
     elif name == 'chromium':
         assert False
 
-    elif name == 'splash':
-        assert False
+    elif name == 'awesomium':
+        driver = webdriver.Chrome
+        bin = dict(executable_path='bin/chromedriver', binary='bin/awesomium_v1.7.5_sdk_linux64/bin/awesomium_process')
+        test_browser(driver, name, bin, no_vdisplay_test_browser)
 
     elif name == 'phantomjs':
         driver = webdriver.PhantomJS

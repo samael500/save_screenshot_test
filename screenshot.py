@@ -4,21 +4,21 @@ import sys
 
 BROWSERS = (
     'firefox',      # +
-    'chrome',       # 0
-    'chromium',     # 0
+    'chrome',       # -
+    'chromium',     # -0
     'splash',       # -
     'ghost',        # 0
-    'zombie',       # 0
-    'phantomjs',    # -
+    'zombie',       # -
+    'phantomjs',    # +
     'awesomium',    # 0
     'slimerjs',     # 0
 )
 
 SELENIUM = (
-    'firefox', 'chrome',
-    # 'chromium', 'splash', 'ghost',
-    'phantomjs',
-    # 'awesomium', 'slimerjs',
+    'firefox', 'chrome', # 'chromium',
+    # 'ghost',
+    'phantomjs', 'awesomium',
+    # 'slimerjs',
 )
 
 SPLASH = ('splash', )
