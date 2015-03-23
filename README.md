@@ -1,13 +1,13 @@
 # save_screenshot_test
 
-- [x] firefox latest
-- [x] google chrome latest
-- (x) chromium
-- [x] splash http://splash.readthedocs.org/en/latest/
+- :white_check_mark: firefox latest
+- :warning: google chrome latest
+- :x: chromium
+- :warning: splash http://splash.readthedocs.org/en/latest/
 - [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
-- [x] zombie.js https://github.com/ryanpetrello/python-zombie
-- [x] PantomJS http://phantomjs.org/
-- (x) Awesomium http://awesomium.com/
+- :x: zombie.js https://github.com/ryanpetrello/python-zombie
+- :white_check_mark: PantomJS http://phantomjs.org/
+- :x: Awesomium http://awesomium.com/
 - [ ] SlimerJs http://slimerjs.org/
 
 test save screenshot in selenium
