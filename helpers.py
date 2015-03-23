@@ -48,6 +48,7 @@ def test_browser(Browser, browser_name, param, fun):
     base_path, log_path = _report_path(browser_name)
     for url in URL_LIST:
         for res in RES_LIST:
+            print url, '::', res
             save_as = get_img_name(base_path, url, res)
             # create counters
             mins = []
