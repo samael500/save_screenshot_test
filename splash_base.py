@@ -4,7 +4,7 @@ from helpers import test_browser
 
 def splash(foo_none1, url, res, save_as, boo_none2):
     """ create rowser and save img """
-    request = 'http://localhost:8050/render.png?url={url}&width={res}&timeout=60'.format(url=url, res=res)
+    request = 'http://localhost:8050/render.png?url={url}&width={res}&timeout=60&render_all=1&wait=1'.format(url=url, res=res)
     res = subprocess.check_call(['curl', request, '-o', save_as])
     assert res == 0
 
