@@ -3,7 +3,7 @@ import os
 
 from memory_profiler import memory_usage
 
-from .settings import URL_LIST, RES_LIST, ATTEMPTS
+from settings import URL_LIST, RES_LIST, ATTEMPTS
 
 
 get_img_name = lambda base_path, url, res: '{base_path}/{url}-{res}px.png'.format(
@@ -21,7 +21,7 @@ def _report_path(browser_name):
     if not os.path.exists(log_path):
         os.makedirs(log_path)
 
-    log_path = os.path.join('log', browser_name)
+    log_path = os.path.join('report_log', browser_name)
     # clear report
     with open(log_path + '.log', 'w') as report:
         report.write('')
@@ -57,7 +57,7 @@ def test_browser(Browser, browser_name, param, fun):
             # make attempts for avg res
             for i in xrange(ATTEMPTS):
                 start = time.time()
-                memory = memory_usage((_test_browser, (Browser, binary, path, url, res, save_as)))
+                memory = memory_usage((fun, (Browser, url, res, save_as, param)))
                 end = time.time()
                 # update counters
                 mins.append(min(memory))

@@ -1,6 +1,6 @@
 from selenium import webdriver
 from xvfbwrapper import Xvfb
-from .helpers import test_browser
+from helpers import test_browser
 
 
 def save_shot(url, width, browser, save_as):
@@ -28,7 +28,6 @@ def no_vdisplay_test_browser(Browser, url, res, save_as, param):
     browser.quit()
 
 def selenium_test_browser(name):
-    path = bin = None
     if name is 'firefox':
         from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
         binary = FirefoxBinary('bin/firefox/firefox-bin')
