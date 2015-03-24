@@ -37,7 +37,7 @@ g_chrome_min_mem, g_chrome_max_mem, g_chrome_avg_mem, g_chrome_time = get_report
 chromium_min_mem, chromium_max_mem, chromium_avg_mem, chromium_time = get_report_data('chromium')
 splash_min_mem, splash_max_mem, splash_avg_mem, splash_time = get_report_data('splash')
 ghost_min_mem, ghost_max_mem, ghost_avg_mem, ghost_time = get_report_data('ghost')
-zombie_min_mem, zombie_max_mem, zombie_avg_mem, zombie_time = get_report_data('zombie')
+phantomjs2_min_mem, phantomjs2_max_mem, phantomjs2_avg_mem, phantomjs2_time = get_report_data('phantomjs2')
 phantomjs_min_mem, phantomjs_max_mem, phantomjs_avg_mem, phantomjs_time = get_report_data('phantomjs')
 awesomium_min_mem, awesomium_max_mem, awesomium_avg_mem, awesomium_time = get_report_data('awesomium')
 slimerjs_min_mem, slimerjs_max_mem, slimerjs_avg_mem, slimerjs_time = get_report_data('slimerjs')
@@ -49,7 +49,7 @@ context = dict(
     chromium_min_mem = chromium_min_mem, chromium_max_mem = chromium_max_mem, chromium_avg_mem = chromium_avg_mem, chromium_time = chromium_time,
     splash_min_mem = splash_min_mem, splash_max_mem = splash_max_mem, splash_avg_mem = splash_avg_mem, splash_time = splash_time,
     ghost_min_mem = ghost_min_mem, ghost_max_mem = ghost_max_mem, ghost_avg_mem = ghost_avg_mem, ghost_time = ghost_time,
-    zombie_min_mem = zombie_min_mem, zombie_max_mem = zombie_max_mem, zombie_avg_mem = zombie_avg_mem, zombie_time = zombie_time,
+    phantomjs2_min_mem = phantomjs2_min_mem, phantomjs2_max_mem = phantomjs2_max_mem, phantomjs2_avg_mem = phantomjs2_avg_mem, phantomjs2_time = phantomjs2_time,
     phantomjs_min_mem = phantomjs_min_mem, phantomjs_max_mem = phantomjs_max_mem, phantomjs_avg_mem = phantomjs_avg_mem, phantomjs_time = phantomjs_time,
     awesomium_min_mem = awesomium_min_mem, awesomium_max_mem = awesomium_max_mem, awesomium_avg_mem = awesomium_avg_mem, awesomium_time = awesomium_time,
     slimerjs_min_mem = slimerjs_min_mem, slimerjs_max_mem = slimerjs_max_mem, slimerjs_avg_mem = slimerjs_avg_mem, slimerjs_time = slimerjs_time,

@@ -10,6 +10,7 @@ BROWSERS = (
     'ghost',        # 0
     'zombie',       # -
     'phantomjs',    # +
+    'phantomjs2',
     'awesomium',    # 0
     'slimerjs',     # 0
 )
@@ -17,8 +18,10 @@ BROWSERS = (
 SELENIUM = (
     'firefox', 'chrome', # 'chromium',
     # 'ghost',
-    'phantomjs', 'awesomium',
-    # 'slimerjs',
+    'phantomjs',
+    'phantomjs2',
+    'awesomium',
+    'slimerjs',
 )
 
 SPLASH = ('splash', )

@@ -50,3 +50,13 @@ def selenium_test_browser(name):
         driver = webdriver.PhantomJS
         path = 'bin/phantomjs-1.9.8-linux-x86_64/bin/phantomjs'
         test_browser(driver, name, path, no_vdisplay_test_browser)
+
+    elif name == 'phantomjs2':
+        driver = webdriver.PhantomJS
+        path = 'bin/phantomjs-2.0.0/bin/phantomjs'
+        test_browser(driver, name, path, no_vdisplay_test_browser)
+
+    elif name == 'slimerjs':
+        driver = webdriver.Remote
+        param = dict(command_executor='http://localhost:9000', desired_capabilities=dict(takeScreenshot=True, javascriptEnabled=True))
+        test_browser(driver, name, param, vdisplay_test_browser)
