@@ -125,6 +125,16 @@
             pointHighlightStroke : "rgba(0,151,58,1)",
         }
 
+        var SLIMERJS10 = {
+            label: "slimerjs10",
+            fillColor : "rgba(0,127,255,0.05)",
+            strokeColor : "rgba(0,127,255,1)",
+            pointColor : "rgba(0,127,255,1)",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "#fff",
+            pointHighlightStroke : "rgba(0,127,255,1)",
+        }
+
         var fox_min_mem = $.extend({}, FIREFOX);
         var fox_max_mem = $.extend({}, FIREFOX);
         var fox_avg_mem = $.extend({}, FIREFOX);
@@ -201,36 +211,45 @@
         var slimerjs_max_mem = $.extend({}, SLIMERJS);
         var slimerjs_avg_mem = $.extend({}, SLIMERJS);
         var slimerjs_time = $.extend({}, SLIMERJS);
-        slimerjs_min_mem['data'] = [];
-        slimerjs_max_mem['data'] = [];
-        slimerjs_avg_mem['data'] = [];
-        slimerjs_time['data'] = [];
+        slimerjs_min_mem['data'] = ['15.71484375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
+        slimerjs_max_mem['data'] = ['15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
+        slimerjs_avg_mem['data'] = ['15.7729749178', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
+        slimerjs_time['data'] = ['3.43993632793', '3.22877731323', '3.22636444569', '3.30638639927', '4.10346372128', '4.03933229446', '4.07919409275', '4.17629072666', '7.95504028797', '8.96674427986', '9.77929608822', '11.1849081039', '3.43214125633', '3.49189894199', '3.70974731445', '3.69796373844'];
+
+        var slimerjs10_min_mem = $.extend({}, SLIMERJS10);
+        var slimerjs10_max_mem = $.extend({}, SLIMERJS10);
+        var slimerjs10_avg_mem = $.extend({}, SLIMERJS10);
+        var slimerjs10_time = $.extend({}, SLIMERJS10);
+        slimerjs10_min_mem['data'] = ['15.7265625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625'];
+        slimerjs10_max_mem['data'] = ['15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625'];
+        slimerjs10_avg_mem['data'] = ['15.7846235795', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625'];
+        slimerjs10_time['data'] = ['3.10453031063', '3.12820179462', '3.21895287037', '3.21312720776', '4.98346383572', '4.15172336102', '4.10054953098', '4.42149577141', '9.51446950436', '8.80193850994', '10.1048063517', '9.88909010887', '3.37668688297', '3.48713963032', '3.52150325775', '3.67387700081'];
 
         var memory_min_data = {
             labels : LABELS,
-            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem]
+            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem, slimerjs10_min_mem]
         };
 
         var memory_max_data = {
             labels : LABELS,
-            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem]
+            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem, slimerjs10_max_mem]
         };
 
         var memory_avg_data = {
             labels : LABELS,
-            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem]
+            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem, slimerjs10_avg_mem]
         };
 
         var time_data = {
             labels : LABELS,
-            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time]
+            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time, slimerjs10_time]
         };
 
         Chart.defaults.global.bezierCurve = false;
         Chart.defaults.global.responsive = true;
         Chart.defaults.global.animation = false;
 
-        var browsers = [FIREFOX, G_CHROME, CHROMIUM, SPLASH, GHOST, PHANTOMJS2, PHANTOMJS, AWESOMIUM, SLIMERJS];
+        var browsers = [FIREFOX, G_CHROME, CHROMIUM, SPLASH, GHOST, PHANTOMJS2, PHANTOMJS, AWESOMIUM, SLIMERJS, SLIMERJS10];
 
         var legends = function() {
             for (index in browsers){
