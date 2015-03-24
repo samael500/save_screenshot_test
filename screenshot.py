@@ -1,6 +1,7 @@
 from selenium_base import selenium_test_browser
 from splash_base import splash_test_browser
 from slimerjs_base import slimerjs_test_browser
+from ghost_base import ghost_test_browser
 import sys
 
 BROWSERS = (
@@ -18,18 +19,19 @@ BROWSERS = (
 )
 
 SELENIUM = (
-    'firefox', 'chrome',
-    # 'chromium',
-    # 'ghost',
+    'firefox',
+    'chrome',
+    'chromium',
     'phantomjs',
     'phantomjs2',
-    'awesomium',
+    # 'awesomium',
 )
 
 SLIMERJS = ('slimerjs', 'slimerjs10', )
 
 SPLASH = ('splash', )
 ZOMBIE = ('zombie', )
+GHOST = ('ghost', )
 
 if __name__ == '__main__':
     name = sys.argv[1]
@@ -44,5 +46,7 @@ if __name__ == '__main__':
         assert False
     elif name in SLIMERJS:
         slimerjs_test_browser(name)
+    elif name in GHOST:
+        ghost_test_browser(name)
     else:
         assert False
