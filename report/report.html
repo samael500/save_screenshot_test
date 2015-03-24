@@ -85,8 +85,8 @@
             pointHighlightStroke : "rgba(61,61,61,1)",
         }
 
-        var ZOMBIE = {
-            label: "zombie",
+        var PHANTOMJS2 = {
+            label: "phantomjs2",
             fillColor : "rgba(0,100,0,0.2)",
             strokeColor : "rgba(0,100,0,1)",
             pointColor : "rgba(0,100,0,1)",
@@ -138,10 +138,10 @@
         var g_chrome_max_mem = $.extend({}, G_CHROME);
         var g_chrome_avg_mem = $.extend({}, G_CHROME);
         var g_chrome_time = $.extend({}, G_CHROME);
-        g_chrome_min_mem['data'] = ['15.734375', '16.203125', '16.24609375', '16.3828125', '16.48046875', '16.48046875', '16.62890625', '16.6875', '16.703125', '16.703125', '16.7421875', '17.109375', '18.32421875', '18.32421875', '18.32421875', '18.32421875'];
-        g_chrome_max_mem['data'] = ['16.203125', '16.37109375', '16.3828125', '16.51171875', '16.48046875', '16.62890625', '17.296875', '18.06640625', '16.703125', '17.66015625', '18.2265625', '18.32421875', '18.32421875', '18.32421875', '18.32421875', '18.32421875'];
-        g_chrome_avg_mem['data'] = ['16.101942108', '16.3014257409', '16.2862310583', '16.4543776267', '16.48046875', '16.613458319', '16.7467300338', '16.7682942008', '16.703125', '17.4758246893', '17.5020089059', '17.8426050591', '18.32421875', '18.32421875', '18.32421875', '18.32421875'];
-        g_chrome_time['data'] = ['7.2771761179', '7.08133022785', '6.34283227921', '6.51391403675', '5.18893258572', '5.70230493546', '5.4175014019', '5.41341087818', '5.42318713665', '5.4295125246', '5.17264809608', '5.49084811211', '5.21409077644', '4.69708769321', '5.15656409264', '4.84198124409'];
+        g_chrome_min_mem['data'] = ['15.7734375', '16.17578125', '16.31640625', '16.4375', '16.5390625', '16.5390625', '16.609375', '16.67578125', '16.67578125', '16.67578125', '17.046875', '17.08984375', '17.08984375', '17.09375', '17.2578125', '17.44140625'];
+        g_chrome_max_mem['data'] = ['16.17578125', '16.359375', '16.4375', '16.57421875', '16.5390625', '17.3203125', '17.58984375', '17.58984375', '16.67578125', '17.625', '17.66015625', '18.296875', '17.09375', '17.2578125', '17.44140625', '17.5078125'];
+        g_chrome_avg_mem['data'] = ['16.0785383184', '16.3058092209', '16.3501968065', '16.5149547763', '16.5390625', '16.8191263844', '16.6660869657', '16.9161379385', '16.67578125', '17.5327519806', '17.4983138479', '17.921044725', '17.093738511', '17.2355758795', '17.4236117788', '17.4810490054'];
+        g_chrome_time['data'] = ['7.53671143055', '7.61179926395', '7.65531818867', '7.94526348114', '7.11461334229', '7.45456695557', '7.332006073', '8.38924951553', '7.31076593399', '7.13437511921', '7.18170099258', '7.49040000439', '6.70548381805', '6.49233388901', '6.53399269581', '13.9047125578'];
 
         var chromium_min_mem = $.extend({}, CHROMIUM);
         var chromium_max_mem = $.extend({}, CHROMIUM);
@@ -170,14 +170,14 @@
         ghost_avg_mem['data'] = [];
         ghost_time['data'] = [];
 
-        var zombie_min_mem = $.extend({}, ZOMBIE);
-        var zombie_max_mem = $.extend({}, ZOMBIE);
-        var zombie_avg_mem = $.extend({}, ZOMBIE);
-        var zombie_time = $.extend({}, ZOMBIE);
-        zombie_min_mem['data'] = [];
-        zombie_max_mem['data'] = [];
-        zombie_avg_mem['data'] = [];
-        zombie_time['data'] = [];
+        var phantomjs2_min_mem = $.extend({}, PHANTOMJS2);
+        var phantomjs2_max_mem = $.extend({}, PHANTOMJS2);
+        var phantomjs2_avg_mem = $.extend({}, PHANTOMJS2);
+        var phantomjs2_time = $.extend({}, PHANTOMJS2);
+        phantomjs2_min_mem['data'] = ['15.81640625', '17.19921875', '17.2109375', '17.2890625', '17.12109375', '17.12109375', '17.1171875', '17.1796875', '17.2265625', '21.75', '24.90625', '23.30859375', '28.31640625', '28.31640625', '28.3203125', '28.33984375'];
+        phantomjs2_max_mem['data'] = ['17.19921875', '17.2109375', '17.28515625', '17.3984375', '17.3984375', '18.49609375', '18.28125', '18.95703125', '66.12109375', '65.390625', '77.69921875', '83.6328125', '28.31640625', '28.31640625', '28.33984375', '28.33984375'];
+        phantomjs2_avg_mem['data'] = ['17.1254755435', '17.2004500106', '17.2484275928', '17.3703202842', '17.1756380208', '17.1291005291', '17.286666378', '17.2370735739', '25.3111399192', '26.26299338', '29.2646661037', '29.007650528', '28.31640625', '28.31640625', '28.3296001777', '28.33984375'];
+        phantomjs2_time['data'] = ['2.41554467678', '2.68612544537', '2.12122781277', '2.19332563877', '2.73879287243', '2.52311611176', '2.76443462372', '2.74453651905', '6.6482622385', '6.8445902586', '7.60072519779', '8.42741734982', '2.32171852589', '2.47127711773', '2.51114094257', '2.72795140743'];
 
         var pantom_min_mem = $.extend({}, PHANTOMJS);
         var pantom_max_mem = $.extend({}, PHANTOMJS);
@@ -208,29 +208,29 @@
 
         var memory_min_data = {
             labels : LABELS,
-            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, zombie_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem]
+            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem]
         };
 
         var memory_max_data = {
             labels : LABELS,
-            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, zombie_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem]
+            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem]
         };
 
         var memory_avg_data = {
             labels : LABELS,
-            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, zombie_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem]
+            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem]
         };
 
         var time_data = {
             labels : LABELS,
-            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, zombie_time, pantom_time, awesomium_time, slimerjs_time]
+            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time]
         };
 
         Chart.defaults.global.bezierCurve = false;
         Chart.defaults.global.responsive = true;
         Chart.defaults.global.animation = false;
 
-        var browsers = [FIREFOX, G_CHROME, CHROMIUM, SPLASH, GHOST, ZOMBIE, PHANTOMJS, AWESOMIUM, SLIMERJS];
+        var browsers = [FIREFOX, G_CHROME, CHROMIUM, SPLASH, GHOST, phantomjs2, PHANTOMJS, AWESOMIUM, SLIMERJS];
 
         var legends = function() {
             for (index in browsers){
