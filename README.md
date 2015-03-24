@@ -41,6 +41,7 @@
     - Иногда возникает ошибка `Can not connect to GhostDriver`
 
 - phantomjs version: `2.0.0`
+    - очень много памяти (даже больше чем фокс)
     - быстро
     - "старый" гугл
     - Иногда возникает ошибка `Can not connect to GhostDriver`
