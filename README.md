@@ -9,7 +9,7 @@
 - :white_check_mark: PantomJS 1x http://phantomjs.org/
 - :white_check_mark: PantomJS 2x http://phantomjs.org/
 - :o: Awesomium http://awesomium.com/
-- :o: SlimerJs http://slimerjs.org/
+- [ ] SlimerJs http://slimerjs.org/
 
 ##test save screenshot in selenium
 
@@ -50,7 +50,4 @@
     - не нашел версии для питона, только C++ или .Net
 
 - slimerjs version: `0.9.0`
-    - no support of Ghost Driver (Selenium web driver) http://docs.slimerjs.org/master/release-notes-0.9.html#missing-apis-in-slimerjs-0-9
-
-- slimerjs version: `0.10.0`
-    - no support of Ghost Driver (Selenium web driver) http://docs.slimerjs.org/master/release-notes-0.10.html#missing-apis-in-slimerjs-0-10
+    - `firefox 33.0`
