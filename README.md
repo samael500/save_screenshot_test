@@ -45,7 +45,8 @@
     - "старый" гугл
     - Иногда возникает ошибка `Can not connect to GhostDriver`
 
-- awesomium version: `Not tested` <!-- `1.7.5.0` -->
+- awesomium version: `Not tested`
+<!-- `1.7.5.0` -->
     - не нашел версии для питона, только C++ или .Net
 
 - slimerjs version: `0.9.0`
