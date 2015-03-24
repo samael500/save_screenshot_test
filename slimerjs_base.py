@@ -6,14 +6,16 @@ import os
 script_path = 'slimer_screen.js'
 
 def make_param(url, res, save_as):
-    script = '''
-var page = require('webpage').create();
-page.open("{url}", function (status) {
-    page.viewportSize = { width:{res}, height:768 };
-    page.render('{save_as}');
-    page.close();
-    slimer.exit();
-});'''.format(url=url, res=res, save_as=save_as)
+    script_template = '''
+        var page = require('webpage').create();
+        page.open('%s', function (status) {
+            page.viewportSize = { width:%s, height:768 };
+            page.render('%s');
+            page.close();
+            slimer.exit();
+        });'''
+    script = script_template % (url, res, save_as)
+
     with open(script_path, 'w') as slimerjs:
         slimerjs.write(script)
 
@@ -23,10 +25,11 @@ def vdisplay_test_browser(path, url, res, save_as, none_2):
     display_params = dict(visible=0, size=(1024, 768), backend='xvfb')
     make_param(url, res, save_as)
     with Display(**display_params):
-        res = subprocess.check_call([path, script_path])
+        res = subprocess.check_call([path, script_path, '--ssl-protocol=any'])
     assert res == 0
 
 def slimerjs_test_browser(name):
+
     if name == 'slimerjs':
         # set slimer use fox
         os.environ['SLIMERJSLAUNCHER'] = 'bin/firefox-33/firefox'
@@ -35,4 +38,4 @@ def slimerjs_test_browser(name):
     if name == 'slimerjs10':
         # set slimer use fox
         os.environ['SLIMERJSLAUNCHER'] = 'bin/firefox-33/firefox'
-        test_browser('./bin/slimerjs-0.10.0/slimerjs', name, None, vdisplay_test_browser)
+        test_browser('./bin/slimerjs-0.10.0pre/slimerjs', name, None, vdisplay_test_browser)
