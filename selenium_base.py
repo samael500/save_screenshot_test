@@ -59,4 +59,4 @@ def selenium_test_browser(name):
     elif name == 'slimerjs':
         driver = webdriver.Remote
         param = dict(command_executor='http://localhost:9000', desired_capabilities=dict(takeScreenshot=True, javascriptEnabled=True))
-        test_browser(driver, name, param, vdisplay_test_browser)
+        test_browser(driver, name, param, no_vdisplay_test_browser)

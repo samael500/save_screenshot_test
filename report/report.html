@@ -37,7 +37,7 @@
 
         var FIREFOX = {
             label: "firefox",
-            fillColor : "rgba(255,140,0,0.2)",
+            fillColor : "rgba(255,140,0,0.05)",
             strokeColor : "rgba(255,140,0,1)",
             pointColor : "rgba(255,140,0,1)",
             pointStrokeColor : "#fff",
@@ -47,7 +47,7 @@
 
         var G_CHROME = {
             label: "g_chrome",
-            fillColor : "rgba(211,211,211,0.2)",
+            fillColor : "rgba(211,211,211,0.05)",
             strokeColor : "rgba(211,211,211,1)",
             pointColor : "rgba(211,211,211,1)",
             pointStrokeColor : "#fff",
@@ -57,7 +57,7 @@
 
         var CHROMIUM = {
             label: "chromium",
-            fillColor : "rgba(0,127,255,0.2)",
+            fillColor : "rgba(0,127,255,0.05)",
             strokeColor : "rgba(0,127,255,1)",
             pointColor : "rgba(0,127,255,1)",
             pointStrokeColor : "#fff",
@@ -67,7 +67,7 @@
 
         var SPLASH = {
             label: "splash",
-            fillColor : "rgba(36,24,130,0.2)",
+            fillColor : "rgba(36,24,130,0.05)",
             strokeColor : "rgba(36,24,130,1)",
             pointColor : "rgba(36,24,130,1)",
             pointStrokeColor : "#fff",
@@ -77,7 +77,7 @@
 
         var GHOST = {
             label: "ghost",
-            fillColor : "rgba(61,61,61,0.2)",
+            fillColor : "rgba(61,61,61,0.05)",
             strokeColor : "rgba(61,61,61,1)",
             pointColor : "rgba(61,61,61,1)",
             pointStrokeColor : "#fff",
@@ -87,7 +87,7 @@
 
         var PHANTOMJS2 = {
             label: "phantomjs2",
-            fillColor : "rgba(0,100,0,0.2)",
+            fillColor : "rgba(0,100,0,0.05)",
             strokeColor : "rgba(0,100,0,1)",
             pointColor : "rgba(0,100,0,1)",
             pointStrokeColor : "#fff",
@@ -97,7 +97,7 @@
 
         var PHANTOMJS = {
             label: "phantomjs",
-            fillColor : "rgba(46,203,214,0.2)",
+            fillColor : "rgba(46,203,214,0.05)",
             strokeColor : "rgba(46,203,214,1)",
             pointColor : "rgba(46,203,214,1)",
             pointStrokeColor : "#fff",
@@ -107,7 +107,7 @@
 
         var AWESOMIUM = {
             label: "awesomium",
-            fillColor : "rgba(123,79,157,0.2)",
+            fillColor : "rgba(123,79,157,0.05)",
             strokeColor : "rgba(123,79,157,1)",
             pointColor : "rgba(123,79,157,1)",
             pointStrokeColor : "#fff",
@@ -117,7 +117,7 @@
 
         var SLIMERJS = {
             label: "slimerjs",
-            fillColor : "rgba(0,151,58,0.2)",
+            fillColor : "rgba(0,151,58,0.05)",
             strokeColor : "rgba(0,151,58,1)",
             pointColor : "rgba(0,151,58,1)",
             pointStrokeColor : "#fff",
@@ -129,10 +129,10 @@
         var fox_max_mem = $.extend({}, FIREFOX);
         var fox_avg_mem = $.extend({}, FIREFOX);
         var fox_time = $.extend({}, FIREFOX);
-        fox_min_mem['data'] = ['15.66796875', '17.01953125', '17.48046875', '17.6796875', '17.56640625', '17.56640625', '17.56640625', '17.6015625', '17.87890625', '21.046875', '23.26953125', '21.98046875', '25.11328125', '25.11328125', '25.11328125', '25.11328125'];
-        fox_max_mem['data'] = ['18.36328125', '18.9375', '18.7421875', '18.80859375', '19.01953125', '19.01953125', '19.015625', '19.140625', '50.19140625', '52.1953125', '57.28515625', '63.44921875', '25.1171875', '25.12109375', '25.12109375', '25.1640625'];
-        fox_avg_mem['data'] = ['17.4341476537', '17.8066113931', '17.6214697912', '17.805820482', '17.9557138387', '17.9510977883', '17.9513959171', '18.0766129452', '23.5388190051', '23.7077300125', '25.4914278499', '25.9889208656', '25.1133603325', '25.1133345032', '25.1133868685', '25.1189428831'];
-        fox_time['data'] = ['10.4909843445', '9.67122159004', '9.75194811821', '16.2619064093', '9.18950295448', '9.02913961411', '8.6022680521', '8.79239268303', '17.2881998301', '15.5994784832', '15.7449853659', '17.2552280426', '8.13257887363', '9.3792014122', '9.64010539055', '7.87419931889'];
+        fox_min_mem['data'] = ['15.71484375', '17.1796875', '17.22265625', '17.48828125', '17.5703125', '17.5703125', '17.59765625', '17.65625', '17.890625', '22.7109375', '25.37890625', '25.47265625', '36.28125', '36.28125', '36.28125', '36.28125'];
+        fox_max_mem['data'] = ['18.1015625', '18.1328125', '18.6875', '18.7109375', '18.734375', '19.0234375', '18.8671875', '19.42578125', '68.4375', '68.09375', '89.4765625', '96.734375', '36.28515625', '36.28515625', '36.28515625', '36.33203125'];
+        fox_avg_mem['data'] = ['17.308725662', '17.5484588295', '17.7003223403', '17.8994534746', '18.0169699885', '18.011076842', '18.0211471928', '18.1636266891', '26.8284512182', '26.9462439355', '31.1782283613', '34.3181358616', '36.2813143405', '36.2813003468', '36.281321287', '36.2869136976'];
+        fox_time['data'] = ['8.46902279854', '8.67070748806', '9.71856486797', '8.98967700005', '8.88944530487', '8.54824459553', '8.9549128294', '9.20606122017', '15.4344019413', '15.3199097395', '18.8659263611', '20.2473539591', '7.60889647007', '7.56111049652', '8.01581907272', '7.84635856152'];
 
         var g_chrome_min_mem = $.extend({}, G_CHROME);
         var g_chrome_max_mem = $.extend({}, G_CHROME);
@@ -234,6 +234,10 @@
 
         var legends = function() {
             for (index in browsers){
+
+                if (!time_data.datasets[index].data.length) {
+                    continue;
+                }
                 var browser = browsers[index];
                 $('ul.browsers').append('<li class={class} />'.replace('{class}', browser['label']));
                 var li = $('li.{class}'.replace('{class}', browser['label']));

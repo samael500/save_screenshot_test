@@ -37,7 +37,7 @@
 
         var FIREFOX = {
             label: "firefox",
-            fillColor : "rgba(255,140,0,0.2)",
+            fillColor : "rgba(255,140,0,0.05)",
             strokeColor : "rgba(255,140,0,1)",
             pointColor : "rgba(255,140,0,1)",
             pointStrokeColor : "#fff",
@@ -47,7 +47,7 @@
 
         var G_CHROME = {
             label: "g_chrome",
-            fillColor : "rgba(211,211,211,0.2)",
+            fillColor : "rgba(211,211,211,0.05)",
             strokeColor : "rgba(211,211,211,1)",
             pointColor : "rgba(211,211,211,1)",
             pointStrokeColor : "#fff",
@@ -57,7 +57,7 @@
 
         var CHROMIUM = {
             label: "chromium",
-            fillColor : "rgba(0,127,255,0.2)",
+            fillColor : "rgba(0,127,255,0.05)",
             strokeColor : "rgba(0,127,255,1)",
             pointColor : "rgba(0,127,255,1)",
             pointStrokeColor : "#fff",
@@ -67,7 +67,7 @@
 
         var SPLASH = {
             label: "splash",
-            fillColor : "rgba(36,24,130,0.2)",
+            fillColor : "rgba(36,24,130,0.05)",
             strokeColor : "rgba(36,24,130,1)",
             pointColor : "rgba(36,24,130,1)",
             pointStrokeColor : "#fff",
@@ -77,7 +77,7 @@
 
         var GHOST = {
             label: "ghost",
-            fillColor : "rgba(61,61,61,0.2)",
+            fillColor : "rgba(61,61,61,0.05)",
             strokeColor : "rgba(61,61,61,1)",
             pointColor : "rgba(61,61,61,1)",
             pointStrokeColor : "#fff",
@@ -87,7 +87,7 @@
 
         var PHANTOMJS2 = {
             label: "phantomjs2",
-            fillColor : "rgba(0,100,0,0.2)",
+            fillColor : "rgba(0,100,0,0.05)",
             strokeColor : "rgba(0,100,0,1)",
             pointColor : "rgba(0,100,0,1)",
             pointStrokeColor : "#fff",
@@ -97,7 +97,7 @@
 
         var PHANTOMJS = {
             label: "phantomjs",
-            fillColor : "rgba(46,203,214,0.2)",
+            fillColor : "rgba(46,203,214,0.05)",
             strokeColor : "rgba(46,203,214,1)",
             pointColor : "rgba(46,203,214,1)",
             pointStrokeColor : "#fff",
@@ -107,7 +107,7 @@
 
         var AWESOMIUM = {
             label: "awesomium",
-            fillColor : "rgba(123,79,157,0.2)",
+            fillColor : "rgba(123,79,157,0.05)",
             strokeColor : "rgba(123,79,157,1)",
             pointColor : "rgba(123,79,157,1)",
             pointStrokeColor : "#fff",
@@ -117,7 +117,7 @@
 
         var SLIMERJS = {
             label: "slimerjs",
-            fillColor : "rgba(0,151,58,0.2)",
+            fillColor : "rgba(0,151,58,0.05)",
             strokeColor : "rgba(0,151,58,1)",
             pointColor : "rgba(0,151,58,1)",
             pointStrokeColor : "#fff",
@@ -234,6 +234,8 @@
 
         var legends = function() {
             for (index in browsers){
+                if (!time_data.datasets[index].data.length) {continue; }
+
                 var browser = browsers[index];
                 $('ul.browsers').append('<li class={class} />'.replace('{class}', browser['label']));
                 var li = $('li.{class}'.replace('{class}', browser['label']));
