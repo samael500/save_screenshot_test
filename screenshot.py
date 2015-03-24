@@ -14,17 +14,20 @@ BROWSERS = (
     'phantomjs2',
     'awesomium',    # 0
     'slimerjs',     # 0
+    'slimerjs10',
 )
 
 SELENIUM = (
-    'firefox', 'chrome', # 'chromium',
+    'firefox', 'chrome',
+    # 'chromium',
     # 'ghost',
     'phantomjs',
     'phantomjs2',
     'awesomium',
 )
 
-SLIMERJS = ('slimerjs', )
+SLIMERJS = ('slimerjs', 'slimerjs10', )
+
 SPLASH = ('splash', )
 ZOMBIE = ('zombie', )
 

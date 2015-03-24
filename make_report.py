@@ -41,6 +41,7 @@ phantomjs2_min_mem, phantomjs2_max_mem, phantomjs2_avg_mem, phantomjs2_time = ge
 phantomjs_min_mem, phantomjs_max_mem, phantomjs_avg_mem, phantomjs_time = get_report_data('phantomjs')
 awesomium_min_mem, awesomium_max_mem, awesomium_avg_mem, awesomium_time = get_report_data('awesomium')
 slimerjs_min_mem, slimerjs_max_mem, slimerjs_avg_mem, slimerjs_time = get_report_data('slimerjs')
+slimerjs10_min_mem, slimerjs10_max_mem, slimerjs10_avg_mem, slimerjs10_time = get_report_data('slimerjs10')
 
 context = dict(
     labels = labels,
@@ -53,6 +54,7 @@ context = dict(
     phantomjs_min_mem = phantomjs_min_mem, phantomjs_max_mem = phantomjs_max_mem, phantomjs_avg_mem = phantomjs_avg_mem, phantomjs_time = phantomjs_time,
     awesomium_min_mem = awesomium_min_mem, awesomium_max_mem = awesomium_max_mem, awesomium_avg_mem = awesomium_avg_mem, awesomium_time = awesomium_time,
     slimerjs_min_mem = slimerjs_min_mem, slimerjs_max_mem = slimerjs_max_mem, slimerjs_avg_mem = slimerjs_avg_mem, slimerjs_time = slimerjs_time,
+    slimerjs10_min_mem = slimerjs10_min_mem, slimerjs10_max_mem = slimerjs10_max_mem, slimerjs10_avg_mem = slimerjs10_avg_mem, slimerjs10_time = slimerjs10_time,
 )
 
 
