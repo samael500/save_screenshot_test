@@ -75,3 +75,42 @@ def test_browser(Browser, browser_name, param, fun):
             # report result
             _report(log_path, save_as, mins, maxs, avgs, times)
             print ''
+
+
+def test_browser_extra_mem(Browser, browser_name, param, fun):
+    """ for each site, for each screen """
+    base_path, log_path = _report_path(browser_name)
+    for url in URL_LIST:
+        for res in RES_LIST:
+            print url, '::', res
+            save_as = get_img_name(base_path, url, res)
+            # create counters
+            mins = []
+            maxs = []
+            avgs = []
+            times = []
+            # make attempts for avg res
+            attempt = 0
+            while attempt < ATTEMPTS:
+                try:
+                    print attempt + 1,
+                    memory2 = []
+                    start = time.time()
+                    memory1 = memory_usage((fun, (Browser, url, res, save_as, param, memory2)))
+                    end = time.time()
+                    memory = []
+                    for i in xrange(min(len(memory1), len(memory2))):
+                        memory.append(memory1[i] + memory2[i])
+                except:
+                    print 'err',
+                else:
+                    assert len(memory)
+                    attempt += 1
+                    # update counters
+                    mins.append(min(memory))
+                    maxs.append(max(memory))
+                    avgs.append(avg(memory))
+                    times.append(end - start)
+            # report result
+            _report(log_path, save_as, mins, maxs, avgs, times)
+            print ''
