@@ -4,7 +4,7 @@
 - :warning: google chrome latest
 - :o: chromium
 - :warning: splash http://splash.readthedocs.org/en/latest/
-- [ ] ghost.py http://ghost-py.readthedocs.org/en/latest/
+- :o: ghost.py http://ghost-py.readthedocs.org/en/latest/
 - :x: zombie.js https://github.com/ryanpetrello/python-zombie
 - :white_check_mark: PantomJS 1x http://phantomjs.org/
 - :white_check_mark: PantomJS 2x http://phantomjs.org/
