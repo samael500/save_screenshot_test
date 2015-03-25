@@ -56,14 +56,22 @@
     - быстрый
     - мало памяти
 
-##Fake useragent
+##Fake useragent `fox 36`
 - phantomjs version: `1.9.8`
-    - быстро
-    - Иногда возникает ошибка `Can not connect to GhostDriver`
+    - selenium
+        - быстро
+        - Иногда возникает ошибка `Can not connect to GhostDriver`
+    - no selenium
+        - ошибки не выявлены
+        - очень быстро
 
 - phantomjs version: `2.0.0`
-    - быстро
-    - Иногда возникает ошибка `Can not connect to GhostDriver`
+    - selenium
+        - быстро
+        - Иногда возникает ошибка `Can not connect to GhostDriver`
+    - no selenium
+        - ошибки не выявлены
+        - очень быстро
 
 - slimerjs version: `0.9.5`, `0.10.0`
     - fox `33`, `35`, `36`
