@@ -55,3 +55,17 @@
     - "старый" гугл
     - быстрый
     - мало памяти
+
+##Fake useragent
+- phantomjs version: `1.9.8`
+    - быстро
+    - Иногда возникает ошибка `Can not connect to GhostDriver`
+
+- phantomjs version: `2.0.0`
+    - быстро
+    - Иногда возникает ошибка `Can not connect to GhostDriver`
+
+- slimerjs version: `0.9.5`, `0.10.0`
+    - fox `33`, `35`, `36`
+    - быстрый
+    - мало памяти
