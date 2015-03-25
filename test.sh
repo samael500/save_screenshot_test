@@ -1,11 +1,16 @@
+echo 'firefox';
 python screenshot.py firefox;
+echo 'chrome';
 python screenshot.py chrome;
 # python screenshot.py ghost;
+echo 'phantom selenium';
 python screenshot.py phantomjs;
 python screenshot.py phantomjs2;
 # python screenshot.py awesomium;
+echo 'slimer';
 python screenshot.py slimerjs;
 python screenshot.py slimerjs10;
+echo 'phantom';
 python screenshot.py phantomjs-no_selenium;
 python screenshot.py phantomjs2-no_selenium;
 python make_report.py;
