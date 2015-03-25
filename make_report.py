@@ -60,6 +60,20 @@ context = dict(
     slimerjs10_min_mem = slimerjs10_min_mem, slimerjs10_max_mem = slimerjs10_max_mem, slimerjs10_avg_mem = slimerjs10_avg_mem, slimerjs10_time = slimerjs10_time,
     phantomjs_nos_min_mem = phantomjs_nos_min_mem, phantomjs_nos_max_mem = phantomjs_nos_max_mem, phantomjs_nos_avg_mem = phantomjs_nos_avg_mem, phantomjs_nos_time = phantomjs_nos_time,
     phantomjs2_nos_min_mem = phantomjs2_nos_min_mem, phantomjs2_nos_max_mem = phantomjs2_nos_max_mem, phantomjs2_nos_avg_mem = phantomjs2_nos_avg_mem, phantomjs2_nos_time = phantomjs2_nos_time,
+
+    fox_color = '255,140,0',
+    g_chrome_color = '255,215,0',
+    chromium_color = '0,0,0',
+    splash_color = '0,0,0',
+    ghost_color = '255,0,0',
+    phantomjs2_color = '30,144,255',
+    phantomjs_color = '0,255,255',
+    awesomium_color = '255,0,255',
+    slimerjs_color = '0,255,0',
+    slimerjs10_color = '0,128,0',
+    phantomjs_nos_color = '0,0,255',
+    phantomjs2_nos_color = '25,25,112',
+
 )
 
 
