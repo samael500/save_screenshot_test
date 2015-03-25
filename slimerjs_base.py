@@ -1,8 +1,12 @@
 from pyvirtualdisplay import Display
+from memory_profiler import memory_usage
+
 from helpers import test_browser_extra_mem
+
 import subprocess
 import os
 import time
+
 
 script_path = 'slimer_screen.js'
 

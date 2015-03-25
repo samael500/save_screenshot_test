@@ -101,8 +101,8 @@ def test_browser_extra_mem(Browser, browser_name, param, fun):
                     memory = []
                     for i in xrange(min(len(memory1), len(memory2))):
                         memory.append(memory1[i] + memory2[i])
-                except:
-                    print 'err',
+                except Exception as e:
+                    print 'err', e,
                 else:
                     assert len(memory)
                     attempt += 1
