@@ -135,6 +135,27 @@
             pointHighlightStroke : "rgba(0,127,255,1)",
         }
 
+        /////////////////////////////////////////////////////
+        var PHANTOMJS_NOS = {
+            label: "phantomjs-no_selenium",
+            fillColor : "rgba(0,151,58,0.05)",
+            strokeColor : "rgba(0,151,58,1)",
+            pointColor : "rgba(0,151,58,1)",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "#fff",
+            pointHighlightStroke : "rgba(0,151,58,1)",
+        }
+
+        var PHANTOMJS2_NOS = {
+            label: "phantomjs2-no_selenium",
+            fillColor : "rgba(0,127,255,0.05)",
+            strokeColor : "rgba(0,127,255,1)",
+            pointColor : "rgba(0,127,255,1)",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "#fff",
+            pointHighlightStroke : "rgba(0,127,255,1)",
+        }
+
         var fox_min_mem = $.extend({}, FIREFOX);
         var fox_max_mem = $.extend({}, FIREFOX);
         var fox_avg_mem = $.extend({}, FIREFOX);
@@ -193,10 +214,10 @@
         var pantom_max_mem = $.extend({}, PHANTOMJS);
         var pantom_avg_mem = $.extend({}, PHANTOMJS);
         var pantom_time = $.extend({}, PHANTOMJS);
-        pantom_min_mem['data'] = ['15.69921875', '17.01953125', '17.01953125', '17.03125', '16.85546875', '16.85546875', '16.87890625', '16.9140625', '16.96484375', '22.8359375', '23.3203125', '24.66015625', '27.96875', '27.96875', '27.97265625', '27.9921875'];
-        pantom_max_mem['data'] = ['17.01953125', '17.01953125', '17.02734375', '17.10546875', '17.546875', '17.5546875', '17.26953125', '18.41796875', '43.9609375', '54.4296875', '75.265625', '80.109375', '27.96875', '27.96875', '27.9921875', '27.9921875'];
-        pantom_avg_mem['data'] = ['16.945904267', '17.01953125', '17.0203450521', '17.0800514323', '16.9734428879', '17.0004560576', '16.9271450716', '16.9639263091', '23.1429419057', '24.0636740374', '28.2198480784', '29.3711262776', '27.96875', '27.96875', '27.981958912', '27.9921875'];
-        pantom_time['data'] = ['2.32283496857', '2.12186322212', '2.13466539383', '2.23548338413', '2.96220226288', '2.87045862675', '2.93383591175', '3.09868736267', '7.92430968285', '8.99613928795', '9.25487465858', '10.0582836151', '2.39872910976', '2.86233155727', '2.49742231369', '2.60521435738'];
+        pantom_min_mem['data'] = ['17.62890625', '18.34375', '18.34375', '18.35546875', '18.171875', '18.3671875', '18.40234375', '18.21875', '18.21875', '23.47265625'];
+        pantom_max_mem['data'] = ['18.34765625', '18.34765625', '18.359375', '18.41015625', '18.50390625', '19.3125', '19.17578125', '19.6484375', '50.3359375', '52.76171875'];
+        pantom_avg_mem['data'] = ['18.3129413627', '18.3437605574', '18.3543594278', '18.3899770599', '18.3414507588', '18.4664841689', '18.4249384355', '18.5248189947', '23.7095132343', '24.5738953344'];
+        pantom_time['data'] = ['3.86604015827', '4.20154778957', '3.70682282448', '4.10528922081', '4.07525680065', '3.73152086735', '4.78964657784', '4.39243066311', '10.3859457731', '9.50024018288'];
 
         var awesomium_min_mem = $.extend({}, AWESOMIUM);
         var awesomium_max_mem = $.extend({}, AWESOMIUM);
@@ -211,10 +232,10 @@
         var slimerjs_max_mem = $.extend({}, SLIMERJS);
         var slimerjs_avg_mem = $.extend({}, SLIMERJS);
         var slimerjs_time = $.extend({}, SLIMERJS);
-        slimerjs_min_mem['data'] = ['15.71484375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
-        slimerjs_max_mem['data'] = ['15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
-        slimerjs_avg_mem['data'] = ['15.7729749178', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375', '15.7734375'];
-        slimerjs_time['data'] = ['3.43993632793', '3.22877731323', '3.22636444569', '3.30638639927', '4.10346372128', '4.03933229446', '4.07919409275', '4.17629072666', '7.95504028797', '8.96674427986', '9.77929608822', '11.1849081039', '3.43214125633', '3.49189894199', '3.70974731445', '3.69796373844'];
+        slimerjs_min_mem['data'] = ['17.59765625'];
+        slimerjs_max_mem['data'] = ['17.66015625'];
+        slimerjs_avg_mem['data'] = ['17.6597486413'];
+        slimerjs_time['data'] = ['4.38858039379'];
 
         var slimerjs10_min_mem = $.extend({}, SLIMERJS10);
         var slimerjs10_max_mem = $.extend({}, SLIMERJS10);
@@ -225,24 +246,42 @@
         slimerjs10_avg_mem['data'] = ['15.7846235795', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625', '15.78515625'];
         slimerjs10_time['data'] = ['3.10453031063', '3.12820179462', '3.21895287037', '3.21312720776', '4.98346383572', '4.15172336102', '4.10054953098', '4.42149577141', '9.51446950436', '8.80193850994', '10.1048063517', '9.88909010887', '3.37668688297', '3.48713963032', '3.52150325775', '3.67387700081'];
 
+        var phantomjs_nos_min_mem = $.extend({}, PHANTOMJS_NOS);
+        var phantomjs_nos_max_mem = $.extend({}, PHANTOMJS_NOS);
+        var phantomjs_nos_avg_mem = $.extend({}, PHANTOMJS_NOS);
+        var phantomjs_nos_time = $.extend({}, PHANTOMJS_NOS);
+        phantomjs_nos_min_mem['data'] = [];
+        phantomjs_nos_max_mem['data'] = [];
+        phantomjs_nos_avg_mem['data'] = [];
+        phantomjs_nos_time['data'] = [];
+
+        var phantomjs2_nos_min_mem = $.extend({}, PHANTOMJS2_NOS);
+        var phantomjs2_nos_max_mem = $.extend({}, PHANTOMJS2_NOS);
+        var phantomjs2_nos_avg_mem = $.extend({}, PHANTOMJS2_NOS);
+        var phantomjs2_nos_time = $.extend({}, PHANTOMJS2_NOS);
+        phantomjs2_nos_min_mem['data'] = [];
+        phantomjs2_nos_max_mem['data'] = [];
+        phantomjs2_nos_avg_mem['data'] = [];
+        phantomjs2_nos_time['data'] = [];
+
         var memory_min_data = {
             labels : LABELS,
-            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem, slimerjs10_min_mem]
+            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem, slimerjs10_min_mem, phantomjs_nos_min_mem, phantomjs2_nos_min_mem]
         };
 
         var memory_max_data = {
             labels : LABELS,
-            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem, slimerjs10_max_mem]
+            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem, slimerjs10_max_mem, phantomjs_nos_max_mem, phantomjs2_nos_max_mem]
         };
 
         var memory_avg_data = {
             labels : LABELS,
-            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem, slimerjs10_avg_mem]
+            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem, slimerjs10_avg_mem, phantomjs_nos_avg_mem, phantomjs2_nos_avg_mem]
         };
 
         var time_data = {
             labels : LABELS,
-            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time, slimerjs10_time]
+            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time, slimerjs10_time, phantomjs_nos_time, phantomjs2_nos_time]
         };
 
         Chart.defaults.global.bezierCurve = false;

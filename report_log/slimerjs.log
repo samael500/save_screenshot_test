@@ -1,6 +1,96 @@
 img/slimerjs/google.com-240px.png
-min: 17.59765625
-max: 17.66015625
-avg: 17.6597486413
-time: 4.38858039379
+min: 17.640625
+max: 17.69921875
+avg: 17.6989563899
+time: 4.55902659893
+
+img/slimerjs/google.com-780px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 4.39431512356
+
+img/slimerjs/google.com-1320px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 4.43147170544
+
+img/slimerjs/google.com-1920px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 4.82492697239
+
+img/slimerjs/www.facebook.com-240px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.94509308338
+
+img/slimerjs/www.facebook.com-780px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.79384837151
+
+img/slimerjs/www.facebook.com-1320px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 4.20696628094
+
+img/slimerjs/www.facebook.com-1920px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 4.82779490948
+
+img/slimerjs/habrahabr.ru-240px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 6.36111140251
+
+img/slimerjs/habrahabr.ru-780px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 6.21475236416
+
+img/slimerjs/habrahabr.ru-1320px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 6.6737442255
+
+img/slimerjs/habrahabr.ru-1920px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 7.49439873695
+
+img/slimerjs/wbtech.pro-240px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.63043687344
+
+img/slimerjs/wbtech.pro-780px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.64753928185
+
+img/slimerjs/wbtech.pro-1320px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.57651138306
+
+img/slimerjs/wbtech.pro-1920px.png
+min: 17.69921875
+max: 17.69921875
+avg: 17.69921875
+time: 3.53408033848
 

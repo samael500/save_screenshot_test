@@ -1,60 +1,96 @@
 img/phantomjs/google.com-240px.png
-min: 17.62890625
-max: 18.34765625
-avg: 18.3129413627
-time: 3.86604015827
+min: 17.5859375
+max: 18.328125
+avg: 18.294971742
+time: 3.25589029789
 
 img/phantomjs/google.com-780px.png
-min: 18.34375
-max: 18.34765625
-avg: 18.3437605574
-time: 4.20154778957
+min: 18.328125
+max: 18.328125
+avg: 18.328125
+time: 3.15858931541
 
 img/phantomjs/google.com-1320px.png
-min: 18.34375
-max: 18.359375
-avg: 18.3543594278
-time: 3.70682282448
+min: 18.328125
+max: 18.33203125
+avg: 18.328136489
+time: 3.14707326889
 
 img/phantomjs/google.com-1920px.png
-min: 18.35546875
-max: 18.41015625
-avg: 18.3899770599
-time: 4.10528922081
+min: 18.33203125
+max: 18.38671875
+avg: 18.3689193803
+time: 3.20482356548
 
 img/phantomjs/www.facebook.com-240px.png
-min: 18.171875
-max: 18.50390625
-avg: 18.3414507588
-time: 4.07525680065
+min: 18.234375
+max: 19.0703125
+avg: 18.4085903274
+time: 2.82150871754
 
 img/phantomjs/www.facebook.com-780px.png
-min: 18.3671875
-max: 19.3125
-avg: 18.4664841689
-time: 3.73152086735
+min: 18.34765625
+max: 18.6953125
+avg: 18.3698307292
+time: 2.76537771225
 
 img/phantomjs/www.facebook.com-1320px.png
-min: 18.40234375
-max: 19.17578125
-avg: 18.4249384355
-time: 4.78964657784
+min: 18.1953125
+max: 19.15625
+avg: 18.4354492973
+time: 3.03188095093
 
 img/phantomjs/www.facebook.com-1920px.png
-min: 18.21875
-max: 19.6484375
-avg: 18.5248189947
-time: 4.39243066311
+min: 18.1953125
+max: 19.078125
+avg: 18.3922276651
+time: 2.90011513233
 
 img/phantomjs/habrahabr.ru-240px.png
-min: 18.21875
-max: 50.3359375
-avg: 23.7095132343
-time: 10.3859457731
+min: 18.3984375
+max: 50.2421875
+avg: 23.9315118647
+time: 6.13254861832
 
 img/phantomjs/habrahabr.ru-780px.png
-min: 23.47265625
-max: 52.76171875
-avg: 24.5738953344
-time: 9.50024018288
+min: 22.90234375
+max: 53.24609375
+avg: 24.15601271
+time: 6.08617460728
+
+img/phantomjs/habrahabr.ru-1320px.png
+min: 24.1796875
+max: 71.90234375
+avg: 29.5273245656
+time: 7.03266062737
+
+img/phantomjs/habrahabr.ru-1920px.png
+min: 23.6171875
+max: 76.5546875
+avg: 29.168436905
+time: 8.03089888096
+
+img/phantomjs/wbtech.pro-240px.png
+min: 27.52734375
+max: 27.52734375
+avg: 27.52734375
+time: 2.35284292698
+
+img/phantomjs/wbtech.pro-780px.png
+min: 27.52734375
+max: 27.52734375
+avg: 27.52734375
+time: 2.4695348978
+
+img/phantomjs/wbtech.pro-1320px.png
+min: 27.52734375
+max: 27.52734375
+avg: 27.52734375
+time: 2.50690710545
+
+img/phantomjs/wbtech.pro-1920px.png
+min: 27.52734375
+max: 27.52734375
+avg: 27.52734375
+time: 2.60562851429
 
