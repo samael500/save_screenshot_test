@@ -8,6 +8,7 @@ script_path = 'slimer_screen.js'
 def make_param(url, res, save_as):
     script_template = '''
         var page = require('webpage').create();
+        page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0';
         page.open('%s', function (status) {
             page.viewportSize = { width:%s, height:768 };
             page.render('%s');

@@ -20,7 +20,8 @@ def vdisplay_test_browser(Browser, url, res, save_as, param):
 
 def no_vdisplay_test_browser(Browser, url, res, save_as, param):
     """ create rowser and save img """
-    browser = Browser(**param) if isinstance(param, dict) else Browser(param)
+    path, kwargs = param
+    browser = Browser(path, **kwargs)
     save_shot(url, res, browser, save_as)
     browser.quit()
 
@@ -46,17 +47,14 @@ def selenium_test_browser(name):
         # bin = dict(executable_path='bin/awesomium_v1.7.5_sdk_linux64/bin/awesomium_process')
         # test_browser(driver, name, bin, no_vdisplay_test_browser)
 
-    elif name == 'phantomjs':
+    elif 'phantomjs' in name:
+        from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+        dcap = dict(DesiredCapabilities.PHANTOMJS)
+        dcap['phantomjs.page.settings.userAgent'] = ('Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0')
+        param = dict(desired_capabilities=dcap)
         driver = webdriver.PhantomJS
-        path = 'bin/phantomjs-1.9.8-linux-x86_64/bin/phantomjs'
-        test_browser(driver, name, path, no_vdisplay_test_browser)
-
-    elif name == 'phantomjs2':
-        driver = webdriver.PhantomJS
-        path = 'bin/phantomjs-2.0.0/bin/phantomjs'
-        test_browser(driver, name, path, no_vdisplay_test_browser)
-
-    elif name == 'slimerjs':
-        driver = webdriver.Remote
-        param = dict(command_executor='http://localhost:9000', desired_capabilities=dict(takeScreenshot=True, javascriptEnabled=True))
-        test_browser(driver, name, param, no_vdisplay_test_browser)
+        if name == 'phantomjs':
+            path = 'bin/phantomjs-1.9.8-linux-x86_64/bin/phantomjs'
+        elif name == 'phantomjs2':
+            path = 'bin/phantomjs-2.0.0/bin/phantomjs'
+        test_browser(driver, name, (path, param), no_vdisplay_test_browser)
