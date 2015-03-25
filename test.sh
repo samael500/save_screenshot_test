@@ -1,0 +1,11 @@
+python screenshot.py firefox;
+python screenshot.py chrome;
+# python screenshot.py ghost;
+python screenshot.py phantomjs;
+python screenshot.py phantomjs2;
+# python screenshot.py awesomium;
+python screenshot.py slimerjs;
+python screenshot.py slimerjs10;
+python screenshot.py phantomjs-no_selenium;
+python screenshot.py phantomjs2-no_selenium;
+python make_report.py;

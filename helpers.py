@@ -56,16 +56,22 @@ def test_browser(Browser, browser_name, param, fun):
             avgs = []
             times = []
             # make attempts for avg res
-            for i in xrange(ATTEMPTS):
-                print i + 1,
-                start = time.time()
-                memory = memory_usage((fun, (Browser, url, res, save_as, param)))
-                end = time.time()
-                # update counters
-                mins.append(min(memory))
-                maxs.append(max(memory))
-                avgs.append(avg(memory))
-                times.append(end - start)
+            attempt = 0
+            while attempt < ATTEMPTS:
+                try:
+                    print attempt + 1,
+                    start = time.time()
+                    memory = memory_usage((fun, (Browser, url, res, save_as, param)))
+                    end = time.time()
+                except:
+                    print 'err',
+                else:
+                    attempt += 1
+                    # update counters
+                    mins.append(min(memory))
+                    maxs.append(max(memory))
+                    avgs.append(avg(memory))
+                    times.append(end - start)
             # report result
             _report(log_path, save_as, mins, maxs, avgs, times)
             print ''
