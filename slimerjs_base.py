@@ -13,6 +13,7 @@ script_path = 'slimer_screen.js'
 def make_param(url, res, save_as):
     script_template = '''
         var page = require('webpage').create();
+        page.viewportSize = { width:1024, height:768 };
         page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0';
         page.open('%s', function (status) {
             page.viewportSize = { width:%s, height:768 };
@@ -44,7 +45,7 @@ def slimerjs_test_browser(name):
 
     if name == 'slimerjs':
         # set slimer use fox
-        os.environ['SLIMERJSLAUNCHER'] = 'bin/firefox-33/firefox'
+        os.environ['SLIMERJSLAUNCHER'] = 'bin/firefox/firefox'
         test_browser_extra_mem('./bin/slimerjs-0.9.5/slimerjs', name, None, vdisplay_test_browser)
 
     if name == 'slimerjs10':

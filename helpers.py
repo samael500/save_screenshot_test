@@ -1,5 +1,6 @@
 import time
 import os
+import subprocess
 
 from memory_profiler import memory_usage
 
@@ -11,6 +12,9 @@ get_img_name = lambda base_path, url, res: '{base_path}/{url}-{res}px.png'.forma
 
 avg = lambda arr: sum(arr) / len(arr)
 
+
+def get_pid(name):
+    return int(subprocess.check_output(['pidof', '-s', name]))
 
 def _report_path(browser_name):
     # base path

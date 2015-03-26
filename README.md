@@ -9,7 +9,7 @@
 - :white_check_mark: PantomJS 1x http://phantomjs.org/
 - :white_check_mark: PantomJS 2x http://phantomjs.org/
 - :o: Awesomium http://awesomium.com/
-- :warning: SlimerJs http://slimerjs.org/
+- :white_check_mark: SlimerJs http://slimerjs.org/
 
 ##test save screenshot in selenium
 
