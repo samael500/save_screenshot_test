@@ -22,7 +22,7 @@ def make_param(url, res, save_as):
     with open(script_path, 'w') as phantomjs:
         phantomjs.write(script)
 
-def no_vdisplay_test_browser(path, url, res, save_as, none_2, memory):
+def no_vdisplay_test_browser(path, url, res, save_as, none_2):
     """ create rowser and save img """
     make_param(url, res, save_as)
     res = subprocess.check_call([path, script_path, '--ssl-protocol=any'])

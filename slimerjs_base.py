@@ -28,7 +28,7 @@ def make_param(url, res, save_as):
         slimerjs.write(script)
 
 
-def vdisplay_test_browser(path, url, res, save_as, none_2, memory):
+def vdisplay_test_browser(path, url, res, save_as, none_2):
     """ create rowser and save img """
     # virtual display
     make_param(url, res, save_as)
