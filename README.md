@@ -1,7 +1,7 @@
 # save_screenshot_test
 
 - :white_check_mark: firefox latest
-- :warning: google chrome latest
+- :x: google chrome latest
 - :o: chromium
 - :warning: splash http://splash.readthedocs.org/en/latest/
 - :o: ghost.py http://ghost-py.readthedocs.org/en/latest/

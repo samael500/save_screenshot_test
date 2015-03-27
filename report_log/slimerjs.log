@@ -1,0 +1,96 @@
+img/slimerjs/google.com-240px.png
+min: 17.328125
+max: 202.33984375
+avg: 137.297006622
+time: 4.74526178837
+
+img/slimerjs/google.com-780px.png
+min: 17.6796875
+max: 202.79296875
+avg: 141.369957869
+time: 4.20428340435
+
+img/slimerjs/google.com-1320px.png
+min: 17.6796875
+max: 200.66015625
+avg: 139.28460062
+time: 4.28119683266
+
+img/slimerjs/google.com-1920px.png
+min: 17.6796875
+max: 205.4609375
+avg: 138.58728809
+time: 4.63735752106
+
+img/slimerjs/www.facebook.com-240px.png
+min: 17.6796875
+max: 214.73828125
+avg: 141.832888296
+time: 4.84686026573
+
+img/slimerjs/www.facebook.com-780px.png
+min: 17.6796875
+max: 210.7890625
+avg: 143.184170143
+time: 4.75059883595
+
+img/slimerjs/www.facebook.com-1320px.png
+min: 17.6796875
+max: 217.9296875
+avg: 142.957170344
+time: 5.15386371613
+
+img/slimerjs/www.facebook.com-1920px.png
+min: 17.6796875
+max: 219.875
+avg: 146.559190679
+time: 4.904651618
+
+img/slimerjs/habrahabr.ru-240px.png
+min: 17.66015625
+max: 371.28125
+avg: 217.695103143
+time: 7.75101499557
+
+img/slimerjs/habrahabr.ru-780px.png
+min: 17.66015625
+max: 366.1953125
+avg: 218.724274769
+time: 8.6845310688
+
+img/slimerjs/habrahabr.ru-1320px.png
+min: 17.6015625
+max: 400.0546875
+avg: 230.541216828
+time: 8.93274474144
+
+img/slimerjs/habrahabr.ru-1920px.png
+min: 17.41796875
+max: 445.4140625
+avg: 261.50316785
+time: 10.45344069
+
+img/slimerjs/wbtech.pro-240px.png
+min: 17.109375
+max: 186.1875
+avg: 130.737887346
+time: 3.96973762512
+
+img/slimerjs/wbtech.pro-780px.png
+min: 17.109375
+max: 186.8125
+avg: 132.276556891
+time: 3.62165920734
+
+img/slimerjs/wbtech.pro-1320px.png
+min: 17.109375
+max: 191.73046875
+avg: 132.851476562
+time: 3.65161151886
+
+img/slimerjs/wbtech.pro-1920px.png
+min: 17.109375
+max: 201.53125
+avg: 135.031338082
+time: 3.95865151882
+

@@ -66,7 +66,7 @@ def test_browser(Browser, browser_name, param, fun):
                 try:
                     print attempt + 1,
                     start = time.time()
-                    memory = memory_usage((fun, (Browser, url, res, save_as, param)), include_children=True, interval=0.01)
+                    memory = memory_usage((fun, (Browser, url, res, save_as, param)), include_children=True)
                     end = time.time()
                 except Exception as err:
                     print 'err:', err,

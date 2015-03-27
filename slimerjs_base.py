@@ -34,7 +34,6 @@ def vdisplay_test_browser(path, url, res, save_as, none_2):
     make_param(url, res, save_as)
     with Display(**display_params):
         res = subprocess.check_call([path, script_path, '--ssl-protocol=any'])
-
     assert res == 0
 
 
