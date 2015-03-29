@@ -1,10 +1,11 @@
 from ghost import Ghost
 from helpers import test_browser
+from settings import USER_AGENT
 
 
 def ghost(foo_none1, url, res, save_as, boo_none2):
     """ create browser and save img """
-    ghost = Ghost()
+    ghost = Ghost(user_agent=USER_AGENT)
     page, resources = ghost.open(url)
     page, resources = ghost.wait_for_page_loaded()
     page.set_viewport_size(res, 768)
