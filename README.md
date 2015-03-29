@@ -4,7 +4,7 @@
 - :x: google chrome latest
 - :o: chromium
 - :warning: splash http://splash.readthedocs.org/en/latest/
-- :o: ghost.py http://ghost-py.readthedocs.org/en/latest/
+- :warning: ghost.py http://ghost-py.readthedocs.org/en/latest/
 - :x: zombie.js https://github.com/ryanpetrello/python-zombie
 - :white_check_mark: PantomJS 1x http://phantomjs.org/
 - :white_check_mark: PantomJS 2x http://phantomjs.org/
@@ -29,8 +29,9 @@
     - не маштабирует изображения - ширина влияет только на размер результата
     - работает отдельно, возможно требует больше памяти чем выявил тест
 
-- ghost version: ``
-    :warning:
+- ghost version: `0.1.1`
+    - жудко тормозит
+    - скрншеты низкого качества - пикселезация зашкаливает
 
 - zombie version: `0.2.0`
     - не умеет делать скриншеты
