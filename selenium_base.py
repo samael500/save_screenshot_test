@@ -1,6 +1,7 @@
 from selenium import webdriver
 from pyvirtualdisplay import Display
 from helpers import test_browser
+from settings import USER_AGENT
 
 
 def save_shot(url, width, browser, save_as):
@@ -50,7 +51,7 @@ def selenium_test_browser(name):
     elif 'phantomjs' in name:
         from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
         dcap = dict(DesiredCapabilities.PHANTOMJS)
-        dcap['phantomjs.page.settings.userAgent'] = ('Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0')
+        dcap['phantomjs.page.settings.userAgent'] = (USER_AGENT)
         param = dict(desired_capabilities=dcap)
         driver = webdriver.PhantomJS
         if name == 'phantomjs':

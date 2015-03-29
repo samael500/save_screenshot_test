@@ -1,6 +1,6 @@
 from pyvirtualdisplay import Display
 from memory_profiler import memory_usage
-
+from settings import USER_AGENT
 from helpers import test_browser, display_params
 
 import subprocess
@@ -15,14 +15,14 @@ def make_param(url, res, save_as):
     script_template = '''
         var page = require('webpage').create();
         page.viewportSize = { width:1024, height:768 };
-        page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0';
+        page.settings.userAgent = '%s';
         page.open('%s', function (status) {
             page.viewportSize = { width:%s, height:768 };
             page.render('%s');
             page.close();
             slimer.exit();
         });'''
-    script = script_template % (url, res, save_as)
+    script = script_template % (USER_AGENT, url, res, save_as)
 
     with open(script_path, 'w') as slimerjs:
         slimerjs.write(script)
