@@ -1,96 +1,96 @@
 img/phantomjs-no_selenium/google.com-240px.png
-min: 17.6015625
-max: 164.203125
-avg: 75.5979125683
-time: 2.39849994183
+min: 57.7578125
+max: 219.31640625
+avg: 131.670365073
+time: 3.06231226921
 
 img/phantomjs-no_selenium/google.com-780px.png
-min: 17.71484375
-max: 163.984375
-avg: 75.3404016033
-time: 1.92405006886
+min: 57.31640625
+max: 214.8046875
+avg: 127.758484909
+time: 2.64720709324
 
 img/phantomjs-no_selenium/google.com-1320px.png
-min: 17.71484375
-max: 161.375
-avg: 74.4899790645
-time: 1.91059846878
+min: 57.31640625
+max: 216.1328125
+avg: 129.343963655
+time: 2.46827688217
 
 img/phantomjs-no_selenium/google.com-1920px.png
-min: 17.71484375
-max: 165.8984375
-avg: 76.1040338985
-time: 1.99841387272
+min: 57.30078125
+max: 219.6484375
+avg: 130.774784537
+time: 2.56695349216
 
 img/phantomjs-no_selenium/www.facebook.com-240px.png
-min: 17.71484375
-max: 156.99609375
-avg: 73.3673297079
-time: 1.9582659483
+min: 57.30078125
+max: 212.2421875
+avg: 127.410987663
+time: 2.063539958
 
 img/phantomjs-no_selenium/www.facebook.com-780px.png
-min: 17.71484375
-max: 158.89453125
-avg: 73.3345570683
-time: 1.86680281162
+min: 50.73828125
+max: 211.48828125
+avg: 128.806087798
+time: 2.85570938587
 
 img/phantomjs-no_selenium/www.facebook.com-1320px.png
-min: 17.71484375
-max: 158.8359375
-avg: 74.3358532475
-time: 1.88832964897
+min: 34.2421875
+max: 189.578125
+avg: 104.341394853
+time: 2.86592776775
 
 img/phantomjs-no_selenium/www.facebook.com-1920px.png
-min: 17.71484375
-max: 161.19921875
-avg: 76.2756040444
-time: 2.00835561752
+min: 34.08984375
+max: 194.171875
+avg: 107.257089286
+time: 2.31111850739
 
 img/phantomjs-no_selenium/habrahabr.ru-240px.png
-min: 17.71484375
-max: 230.4140625
-avg: 135.243205451
-time: 4.665371418
+min: 33.828125
+max: 257.20703125
+avg: 152.993849462
+time: 6.32319159508
 
 img/phantomjs-no_selenium/habrahabr.ru-780px.png
-min: 17.71484375
-max: 230.67578125
-avg: 137.240501676
-time: 4.78995499611
+min: 33.84375
+max: 253.48046875
+avg: 158.275862943
+time: 5.0160172224
 
 img/phantomjs-no_selenium/habrahabr.ru-1320px.png
-min: 17.71484375
-max: 235.28515625
-avg: 137.421193027
-time: 5.02134346962
+min: 33.84375
+max: 258.94921875
+avg: 161.196604224
+time: 4.55430297852
 
 img/phantomjs-no_selenium/habrahabr.ru-1920px.png
-min: 17.71484375
-max: 250.078125
-avg: 151.012679118
-time: 5.41559886932
+min: 33.84375
+max: 273.55078125
+avg: 174.474177281
+time: 5.43175292015
 
 img/phantomjs-no_selenium/wbtech.pro-240px.png
-min: 17.71484375
-max: 150.8046875
-avg: 70.048643544
-time: 1.45996747017
+min: 33.84375
+max: 180.0
+avg: 99.7483057324
+time: 1.81632361412
 
 img/phantomjs-no_selenium/wbtech.pro-780px.png
-min: 17.71484375
-max: 154.30078125
-avg: 71.3982552083
-time: 1.55629785061
+min: 33.84375
+max: 186.16015625
+avg: 103.507046878
+time: 2.04054441452
 
 img/phantomjs-no_selenium/wbtech.pro-1320px.png
-min: 17.71484375
-max: 154.1484375
-avg: 71.4040364583
-time: 1.6749022007
+min: 33.84375
+max: 187.69921875
+avg: 103.637850222
+time: 1.99148631096
 
 img/phantomjs-no_selenium/wbtech.pro-1920px.png
-min: 17.71484375
-max: 158.62109375
-avg: 74.4835205078
-time: 1.74343559742
+min: 33.84375
+max: 188.37890625
+avg: 105.620699295
+time: 2.0746994257
 
