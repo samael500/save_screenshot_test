@@ -10,13 +10,13 @@ BROWSERS = (
     'chrome',       # -
     'chromium',     # -0
     'splash',       # -
-    'ghost',        # 0
+    'ghost',        # -
     'zombie',       # -
     'phantomjs',    # +
     'phantomjs2',
     'awesomium',    # 0
-    'slimerjs',     # 0
-    'slimerjs10',
+    'slimerjs',     # -
+    'slimerjs10',   # -
 
     'phantomjs-no_selenium',
     'phantomjs2-no_selenium',
