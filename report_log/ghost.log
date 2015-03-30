@@ -1,18 +1,95 @@
 img/ghost/google.com-240px.png
-min: 57.5546875
-max: 567.6953125
-avg: 363.351043485
-time: 1.70042667389
+min: 57.6484375
+max: 632.5703125
+avg: 381.481622747
+time: 1.79704072475
 
 img/ghost/google.com-780px.png
-min: 305.9609375
-max: 1013.5
-avg: 764.755504857
-time: 2.27458276749
+min: 359.71484375
+max: 1073.0390625
+avg: 825.572668425
+time: 1.46408410072
 
 img/ghost/google.com-1320px.png
-min: 527.609375
-max: 2168.08984375
-avg: 1340.39255891
-time: 3.17137019634
+min: 573.0625
+max: 1481.66796875
+avg: 1249.1399628
+time: 1.59935195446
+
+img/ghost/google.com-1920px.png
+min: 781.90625
+max: 1913.3203125
+avg: 1668.74281145
+time: 1.69189586639
+img/ghost/www.facebook.com-240px.png
+min: 58.10546875
+max: 775.00390625
+avg: 445.894963892
+time: 1.80878140926
+
+img/ghost/www.facebook.com-780px.png
+min: 433.8515625
+max: 1428.04296875
+avg: 1088.80533814
+time: 2.06640074253
+
+img/ghost/www.facebook.com-1320px.png
+min: 764.20703125
+max: 2086.30859375
+avg: 1736.49032419
+time: 2.22396113873
+
+img/ghost/www.facebook.com-1920px.png
+min: 1097.0546875
+max: 2745.08203125
+avg: 2383.10018455
+time: 2.49860439301
+
+img/ghost/habrahabr.ru-240px.png
+min: 1424.5078125
+max: 3018.109375
+avg: 2864.54675177
+time: 4.21526384354
+
+img/ghost/habrahabr.ru-780px.png
+min: 1199.08203125
+max: 2997.35546875
+avg: 2471.85743496
+time: 4.93821661472
+
+img/ghost/habrahabr.ru-1320px.png
+min: 1265.73046875
+max: 2609.96484375
+avg: 2503.62350453
+time: 5.09522509575
+
+img/ghost/habrahabr.ru-1920px.png
+min: 1332.93359375
+max: 2765.0390625
+avg: 2656.68014718
+time: 5.27006001472
+
+img/ghost/wbtech.pro-240px.png
+min: 1400.609375
+max: 2773.07421875
+avg: 2675.98643762
+time: 2.22158868313
+
+img/ghost/wbtech.pro-780px.png
+min: 1426.91796875
+max: 2848.84765625
+avg: 2740.80630587
+time: 2.32183098793
+
+img/ghost/wbtech.pro-1320px.png
+min: 1428.3046875
+max: 2889.0859375
+avg: 2761.88476822
+time: 2.37284250259
+
+img/ghost/wbtech.pro-1920px.png
+min: 1438.984375
+max: 2872.72265625
+avg: 2773.00109655
+time: 2.42232656479
 
