@@ -20,7 +20,6 @@
 - [Ghost.py](http://ghost-py.readthedocs.org/en/latest/) `0.1.1`
 - [Zombie.js](https://github.com/ryanpetrello/python-zombie/) `0.2.0`
 - [Pantom.js](http://phantomjs.org/) `1.9.8`, `2.0.0`
-- [Awesomium](http://awesomium.com/) `Not tested`
 - [Slimer.js](http://slimerjs.org/) `0.9.5`, `0.10.0pre`
 
 Итак, участники отобраны, и готовы показать себя во всей красе, что ж &mdash;
@@ -41,11 +40,6 @@
 
 при следующих разрешениях экранов по ширине: `240`, `780`, `1320`, `1920`
 пикселей.
-
-
-####Технические неполадки
-На данный момент не удалось корректно запустить `Awesomium`, так что он снят с
-соревнований по техническим причинам. Не победитель, не побежденный.
 
 
 ##Заезд первый &mdash; &laquo;Качество&raquo;
@@ -140,7 +134,6 @@ Ghost.py не очень хорошо умеет захватывать карт
 - :x: Google Chrome
 - :x: Splash
 - :x: Zombie.js
-- :heavy_multiplication_x: Awesomium
 
 
 ##Заезд второй &mdash; &laquo;Скорость&raquo;
