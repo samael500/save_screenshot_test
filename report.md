@@ -94,7 +94,8 @@ res = subprocess.check_call(['curl', request, '-o', save_as])
 ####&laquo;Что я вообще сдесь делаю&raquo; &copy; Zombie
 ![zombie](im/zombie.jpg)
 
-Как оказалось зомби вообще не умеет делать скриншоты.
+Как оказалось зомби вообще не умеет делать скриншоты, поэтому выбывает из
+соревнований.
 
 
 ####Фальшивые паспорта &mdash; старый гугл
@@ -260,21 +261,12 @@ Firefox работает в связке с `selenium`-ом и управляе�
 from selenium import webdriver
 from pyvirtualdisplay import Display
 # ...
-
-def save_shot(url, width, browser, save_as):
-    """ Open page and save screenshot """
+with Display(**display_params):
+    browser = Browser(**param)
     browser.set_window_size(width, 768)
     browser.get(url)
     browser.save_screenshot(save_as)
-
-def vdisplay_test_browser(Browser, url, res, save_as, param):
-    """ create browser and save img """
-    # virtual display
-    display_params = dict(visible=0, size=(1024, 768), backend='xvfb')
-    with Display(**display_params):
-        browser = Browser(**param)
-        save_shot(url, res, browser, save_as)
-        browser.quit()
+    browser.quit()
 ```
 
 ####Фантом
