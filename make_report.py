@@ -16,7 +16,7 @@ def get_labels():
 
 def get_report_data(browser_name):
     path = os.path.join('report_log', browser_name + '-min.log')
-    if not os.path.exists(path) or browser_name == 'ghost':
+    if not os.path.exists(path) or browser_name in ('chrome', 'chromium', 'splash', 'ghost', 'awesomium'):
         return [], [], [], []
     min_mem = []
     max_mem = []
