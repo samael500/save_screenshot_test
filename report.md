@@ -198,6 +198,7 @@ from memory_profiler import memory_usage
     avgs.append(avg(memory))
 ```
 
+
 ####Ненасытное приведение
 Ghost.py &mdash; оказался чрезвычайно прожорливым, занимая всю доступную память
 доходил до максимума и вылетал. Единственный из участников, кто не сумел пройти
@@ -207,3 +208,127 @@ Ghost.py &mdash; оказался чрезвычайно прожорливым,
 >I ain't afraid a no ghosts
 
 ![ghostbusters](im/ghostbusters.png)
+
+
+####Двуличный хитрец
+Оказалось что Лизун притворяется, запускается дочерний процесс `slimerjs`,
+который потребляет не более 3 Mb памяти, но при этом запускает ещё один дочерний
+процесс с именем `firefox`, который уже добирает память до 300 Mb.
+
+
+####Общие затраты памяти
+Поскольку Ghost потребляет уж слишком много ресурсов, на графиках не
+указывается.
+
+![memory max](im/max.png)
+
+![memory avg](im/avg.png)
+
+
+###Результаты третьего заезда
+В ходе данного этапа, участники заняли следующие места:
+
+1. Phantom.js `1.x`
+1. Phantom.js `2.x`
+1. Phantom.js `1.x` + selenium
+1. Phantom.js `2.x` + selenium
+1. Slimer.js `9.x`
+1. Slimer.js `10.x`
+1. Firefox + selenium
+1. Ghost.py
+
+На этом этапе выбывает `Ghost.py`, турнирная таблица принимает вид:
+- :white_check_mark: Pantom.js
+- :white_check_mark: Slimer.js
+- :white_check_mark: Firefox
+- :x: Ghost.py
+
+
+##Заезд четвертый &mdash; &laquo;Управляемость&raquo;
+![wet road](im/wet_road.png)
+
+Несмотря на то, что определилась тройка лидеров и уже можно подвести итоги,
+рассмотрим как управлять безголовыми браузерами.
+
+
+####Огненная лиса
+Firefox работает в связке с `selenium`-ом и управляется достаточно просто,
+единственная особенность &mdash; это то, что браузер запускает графическую
+оболочку поэтому нужно использовать виртуальный дисплей.
+
+```python
+from selenium import webdriver
+from pyvirtualdisplay import Display
+# ...
+
+def save_shot(url, width, browser, save_as):
+    """ Open page and save screenshot """
+    browser.set_window_size(width, 768)
+    browser.get(url)
+    browser.save_screenshot(save_as)
+
+def vdisplay_test_browser(Browser, url, res, save_as, param):
+    """ create browser and save img """
+    # virtual display
+    display_params = dict(visible=0, size=(1024, 768), backend='xvfb')
+    with Display(**display_params):
+        browser = Browser(**param)
+        save_shot(url, res, browser, save_as)
+        browser.quit()
+```
+
+####Фантом
+Phantom.js можно использовать как самостоятельный безголовый браузер, так и в
+связке с `selenium`-ом.
+Работа с селениумом аналогична огненной лисе, за тем лишь исключением, что нет
+необходимости запускать виртуальный дисплей.
+
+Собственная работа фантома, заключается в вызове консольной команды, и передаче
+ей скрипта для выполнения браузером.
+
+```javascript
+var page = require('webpage').create();
+page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) Firefox/36.0';
+page.viewportSize = { width:1920, height:768 };
+page.open('http://wbtech.pro/', function (status) {
+    page.render('img/phantomjs2-no_selenium/wbtech.pro-1920px.png');
+    phantom.exit();
+});
+```
+В python запускаем браузер с помощью стандартной библиотеки `subprocess`.
+
+```python
+import subprocess
+# ...
+subprocess.check_call([phantom_path, script_path, '--ssl-protocol=any'])
+```
+
+
+####Лизун
+Slimer.js работает точно так же, как и фантом без селениума, но является не
+совсем безголовым, он запускает графическую оболочку, поэтому требует виртуальный
+дисплей.
+
+А так же, в ходе тестирования было выявлено, что для корректного скриншота нужно
+всегда, перед открытием страницы - указывать базовую ширину окна браузера.
+
+```javascript
+var page = require('webpage').create();
+page.viewportSize = { width:1024, height:768 };
+page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) Firefox/36.0';
+page.open('http://wbtech.pro/', function (status) {
+    page.viewportSize = { width:1920, height:768 };
+    page.render('img/slimerjs10/wbtech.pro-1920px.png');
+    page.close();
+    slimer.exit();
+});
+```
+В python запускаем браузер с помощью стандартной библиотеки `subprocess`.
+
+```python
+from pyvirtualdisplay import Display
+import subprocess
+# ...
+with Display(**display_params):
+    subprocess.check_call([slimer_path, script_path, '--ssl-protocol=any'])
+```
