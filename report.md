@@ -350,4 +350,4 @@ with Display(**display_params):
 Безоговорочным лидером гонки стал фантом, в качестве награды, ему будет
 предложено занять пост огненной лисы, на сервисе [coment.me](http://coment.me/).
 
-![pedestal](im/pedestal.jpg)
+![pedestal](im/pedestal.png)
