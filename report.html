@@ -312,7 +312,7 @@ subprocess.check_call([phantom_path, script_path, <span class="pl-s"><span class
 
 <p><code>Slimer.js</code> работает точно так же, как и <code>phantom.js</code> без <code>selenium</code>-а, но является не совсем безголовым, он запускает графическую оболочку, поэтому требует виртуальный дисплей.</p>
 
-<p>А так же, в ходе тестирования было выявлено, что для корректного скриншота нужно всегда, перед открытием страницы, указывать базовую ширину окна браузера.</p>
+<p>А так же, в ходе тестирования было <a href="http://stackoverflow.com/questions/29280104/slimerjs-takes-a-snapshot-of-only-the-visible-area/">выявлено</a>, что для корректного скриншота нужно всегда, перед открытием страницы, указывать базовую ширину окна браузера.</p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> page <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>webpage<span class="pl-pds">'</span></span>).create();
 page.viewportSize <span class="pl-k">=</span> { width<span class="pl-k">:</span><span class="pl-c1">1024</span>, height<span class="pl-k">:</span><span class="pl-c1">768</span> };
