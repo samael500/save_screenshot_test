@@ -1,322 +1,1337 @@
-<!doctype html>
-<html>
-    <head>
-        <title>report</title>
-        <script src="jquery.min.js"></script>
-        <script src="Chart.min.js"></script>
-    </head>
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 80em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+.body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.body a {
+  background: transparent;
+}
+
+.body a:active,
+.body a:hover {
+  outline: 0;
+}
+
+.body strong {
+  font-weight: bold;
+}
+
+.body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.body img {
+  border: 0;
+}
+
+.body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.body pre {
+  overflow: auto;
+}
+
+.body code,
+.body kbd,
+.body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.body html input[disabled] {
+  cursor: default;
+}
+
+.body input {
+  line-height: normal;
+}
+
+.body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.body td,
+.body th {
+  padding: 0;
+}
+
+.body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.body a:hover,
+.body a:focus,
+.body a:active {
+  text-decoration: underline;
+}
+
+.body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.body hr:before {
+  display: table;
+  content: "";
+}
+
+.body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.body h1,
+.body h2,
+.body h3,
+.body h4,
+.body h5,
+.body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.body h1 {
+  font-size: 30px;
+}
+
+.body h2 {
+  font-size: 21px;
+}
+
+.body h3 {
+  font-size: 16px;
+}
+
+.body h4 {
+  font-size: 14px;
+}
+
+.body h5 {
+  font-size: 12px;
+}
+
+.body h6 {
+  font-size: 11px;
+}
+
+.body blockquote {
+  margin: 0;
+}
+
+.body ul,
+.body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body ol ol,
+.body ul ol {
+  list-style-type: lower-roman;
+}
+
+.body ul ul ol,
+.body ul ol ol,
+.body ol ul ol,
+.body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.body dd {
+  margin-left: 0;
+}
+
+.body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.body .octicon-link:before {
+  content: '\f05c';
+}
+
+.body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.body .anchor:focus {
+  outline: none;
+}
+
+.body h1,
+.body h2,
+.body h3,
+.body h4,
+.body h5,
+.body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.body h1 .octicon-link,
+.body h2 .octicon-link,
+.body h3 .octicon-link,
+.body h4 .octicon-link,
+.body h5 .octicon-link,
+.body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.body h1:hover .anchor,
+.body h2:hover .anchor,
+.body h3:hover .anchor,
+.body h4:hover .anchor,
+.body h5:hover .anchor,
+.body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.body h1:hover .anchor .octicon-link,
+.body h2:hover .anchor .octicon-link,
+.body h3:hover .anchor .octicon-link,
+.body h4:hover .anchor .octicon-link,
+.body h5:hover .anchor .octicon-link,
+.body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.body h4 {
+  font-size: 1.25em;
+}
+
+.body h5 {
+  font-size: 1em;
+}
+
+.body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.body p,
+.body blockquote,
+.body ul,
+.body ol,
+.body dl,
+.body table,
+.body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.body ul,
+.body ol {
+  padding-left: 2em;
+}
+
+.body ul ul,
+.body ul ol,
+.body ol ol,
+.body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body li>p {
+  margin-top: 16px;
+}
+
+.body dl {
+  padding: 0;
+}
+
+.body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.body table th {
+  font-weight: bold;
+}
+
+.body table th,
+.body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.body code:before,
+.body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.body .highlight {
+  margin-bottom: 16px;
+}
+
+.body .highlight pre,
+.body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.body pre {
+  word-wrap: normal;
+}
+
+.body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.body pre code:before,
+.body pre code:after {
+  content: normal;
+}
+
+.body .highlight {
+  background: #fff;
+}
+
+.body .highlight .h {
+  color: #333;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.body .highlight .mf,
+.body .highlight .mh,
+.body .highlight .mi,
+.body .highlight .mo,
+.body .highlight .il,
+.body .highlight .m {
+  color: #945277;
+}
+
+.body .highlight .s,
+.body .highlight .sb,
+.body .highlight .sc,
+.body .highlight .sd,
+.body .highlight .s2,
+.body .highlight .se,
+.body .highlight .sh,
+.body .highlight .si,
+.body .highlight .sx,
+.body .highlight .s1 {
+  color: #df5000;
+}
+
+.body .highlight .kc,
+.body .highlight .kd,
+.body .highlight .kn,
+.body .highlight .kp,
+.body .highlight .kr,
+.body .highlight .kt,
+.body .highlight .k,
+.body .highlight .o {
+  font-weight: bold;
+}
+
+.body .highlight .kt {
+  color: #458;
+}
+
+.body .highlight .c,
+.body .highlight .cm,
+.body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.body .highlight .cp,
+.body .highlight .cs,
+.body .highlight .cp .h {
+  color: #999;
+  font-weight: bold;
+}
+
+.body .highlight .cs {
+  font-style: italic;
+}
+
+.body .highlight .n {
+  color: #333;
+}
+
+.body .highlight .na,
+.body .highlight .nv,
+.body .highlight .vc,
+.body .highlight .vg,
+.body .highlight .vi {
+  color: #008080;
+}
+
+.body .highlight .nb {
+  color: #0086B3;
+}
+
+.body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.body .highlight .no {
+  color: #094e99;
+}
+
+.body .highlight .ni {
+  color: #800080;
+}
+
+.body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.body .highlight .nn {
+  color: #555;
+}
+
+.body .highlight .nt {
+  color: #000080;
+}
+
+.body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.body .highlight .ge {
+  font-style: italic;
+}
+
+.body .highlight .gr {
+  color: #aa0000;
+}
+
+.body .highlight .gh {
+  color: #999;
+}
+
+.body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.body .highlight .go {
+  color: #888;
+}
+
+.body .highlight .gp {
+  color: #555;
+}
+
+.body .highlight .gs {
+  font-weight: bold;
+}
+
+.body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.body .highlight .gt {
+  color: #aa0000;
+}
+
+.body .highlight .ow {
+  font-weight: bold;
+}
+
+.body .highlight .w {
+  color: #bbb;
+}
+
+.body .highlight .sr {
+  color: #017936;
+}
+
+.body .highlight .ss {
+  color: #8b467f;
+}
+
+.body .highlight .bp {
+  color: #999;
+}
+
+.body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #000;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+
+.body .highlight .pl-coc,
+.body .highlight .pl-entm,
+.body .highlight .pl-eoa,
+.body .highlight .pl-mai .pl-sf,
+.body .highlight .pl-pdv,
+.body .highlight .pl-sc,
+.body .highlight .pl-sr,
+.body .highlight .pl-v,
+.body .highlight .pl-vpf {
+  color: #0086b3;
+}
+
+.body .highlight .pl-eoac,
+.body .highlight .pl-mdht,
+.body .highlight .pl-mi1,
+.body .highlight .pl-mri,
+.body .highlight .pl-va,
+.body .highlight .pl-vpu {
+  color: #008080;
+}
+
+.body .highlight .pl-c,
+.body .highlight .pl-pdc {
+  color: #b4b7b4;
+  font-style: italic;
+}
+
+.body .highlight .pl-k,
+.body .highlight .pl-ko,
+.body .highlight .pl-kolp,
+.body .highlight .pl-mc,
+.body .highlight .pl-mr,
+.body .highlight .pl-ms,
+.body .highlight .pl-s,
+.body .highlight .pl-sok,
+.body .highlight .pl-st {
+  color: #6e5494;
+}
+
+.body .highlight .pl-ef,
+.body .highlight .pl-enf,
+.body .highlight .pl-enm,
+.body .highlight .pl-entc,
+.body .highlight .pl-eoi,
+.body .highlight .pl-sf,
+.body .highlight .pl-smc {
+  color: #d12089;
+}
+
+.body .highlight .pl-ens,
+.body .highlight .pl-eoai,
+.body .highlight .pl-kos,
+.body .highlight .pl-mh .pl-pdh,
+.body .highlight .pl-mp,
+.body .highlight .pl-pde,
+.body .highlight .pl-stp {
+  color: #458;
+}
+
+.body .highlight .pl-enti {
+  color: #d12089;
+  font-weight: bold;
+}
+
+.body .highlight .pl-cce,
+.body .highlight .pl-enc,
+.body .highlight .pl-kou,
+.body .highlight .pl-mq {
+  color: #f93;
+}
+
+.body .highlight .pl-mp1 .pl-sf {
+  color: #458;
+  font-weight: bold;
+}
+
+.body .highlight .pl-cos,
+.body .highlight .pl-ent,
+.body .highlight .pl-md,
+.body .highlight .pl-mdhf,
+.body .highlight .pl-ml,
+.body .highlight .pl-pdc1,
+.body .highlight .pl-pds,
+.body .highlight .pl-s1,
+.body .highlight .pl-scp,
+.body .highlight .pl-sol {
+  color: #df5000;
+}
+
+.body .highlight .pl-c1,
+.body .highlight .pl-cn,
+.body .highlight .pl-pse,
+.body .highlight .pl-pse .pl-s2,
+.body .highlight .pl-vi {
+  color: #a31515;
+}
+
+.body .highlight .pl-mb,
+.body .highlight .pl-pdb {
+  color: #df5000;
+  font-weight: bold;
+}
+
+.body .highlight .pl-mi,
+.body .highlight .pl-pdi {
+  color: #6e5494;
+  font-style: italic;
+}
+
+.body .highlight .pl-ms1 {
+  background-color: #f5f5f5;
+}
+
+.body .highlight .pl-mdh,
+.body .highlight .pl-mdi {
+  font-weight: bold;
+}
+
+.body .highlight .pl-mdr {
+  color: #0086b3;
+  font-weight: bold;
+}
+
+.body .highlight .pl-s2 {
+  color: #333;
+}
+
+.body .highlight .pl-ii {
+  background-color: #df5000;
+  color: #fff;
+}
+
+.body .highlight .pl-ib {
+  background-color: #f93;
+}
+
+.body .highlight .pl-id {
+  background-color: #a31515;
+  color: #fff;
+}
+
+.body .highlight .pl-iu {
+  background-color: #b4b7b4;
+}
+
+.body .highlight .pl-mo {
+  color: #969896;
+}
+
+.body .task-list-item {
+  list-style-type: none;
+}
+
+.body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+<title>report</title>
+</head>
 <body>
-    <h2>Legend</h2>
-    <div>
-        <ul class="browsers">
-        </ul>
-    </div>
+<article class="body">
 
-    <h2>Memory MIN</h2>
-    <div>
-        <canvas id="canvas-memory_min"></canvas>
-    </div>
-    <h2>Memory MAX</h2>
-    <div>
-        <canvas id="canvas-memory_max"></canvas>
-    </div>
-    <h2>Memory AVG</h2>
-    <div>
-        <canvas id="canvas-memory_avg"></canvas>
-    </div>
-    <h2>Time</h2>
-    <div>
-        <canvas id="canvas-time"></canvas>
-    </div>
+<h1>Ралли на браузерах</h1>
 
+<p>Собственный проект <a href="http://wbtech.pro/">WB—Tech</a> по комментированию
+скриншотов <a href="http://coment.me/">coment.me</a> на сегодняшний день, для получения
+снимка сайта, использует связку <code>selenium + firefox</code>. Данный подход решает
+задачи получения скриншота, однако тратит достаточно много памяти, и к тому же
+со временем накапливается большое количество повисших процессов, что в свою
+очередь приводит к подвисанию сервиса. В связи с этим, необходимо исследовать
+доступные варианты и определить наилучший из браузеров для автоматического
+создания скриншотов.</p>
 
-    <script>
-        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+<p>Критерииями для выбора победителя будут являтся:</p>
 
-        var LABELS = ['google.com-240px', 'google.com-780px', 'google.com-1320px', 'google.com-1920px', 'www.facebook.com-240px', 'www.facebook.com-780px', 'www.facebook.com-1320px', 'www.facebook.com-1920px', 'habrahabr.ru-240px', 'habrahabr.ru-780px', 'habrahabr.ru-1320px', 'habrahabr.ru-1920px', 'wbtech.pro-240px', 'wbtech.pro-780px', 'wbtech.pro-1320px', 'wbtech.pro-1920px'];
+<ul>
+<li>Качество скриншотов</li>
+<li>Скорость работы</li>
+<li>Затрачиваемые ресурсы</li>
+</ul>
 
-        var FIREFOX = {
-            label: "firefox",
-            fillColor : "rgba(255,140,0,0.03)",
-            strokeColor : "rgba(255,140,0,1)",
-            pointColor : "rgba(255,140,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(255,140,0,1)",
-        }
+<h2>
+<a id="user-content-Участники-соревнований" class="anchor" href="#%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B8-%D1%81%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Участники соревнований</h2>
 
-        var G_CHROME = {
-            label: "g_chrome",
-            fillColor : "rgba(255,215,0,0.03)",
-            strokeColor : "rgba(255,215,0,1)",
-            pointColor : "rgba(255,215,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(255,215,0,1)",
-        }
+<p>На участие в ралли были отобранны следующие кандидаты:</p>
 
-        var CHROMIUM = {
-            label: "chromium",
-            fillColor : "rgba(0,0,0,0.03)",
-            strokeColor : "rgba(0,0,0,1)",
-            pointColor : "rgba(0,0,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,0,0,1)",
-        }
+<ul>
+<li>Firefox <code>36.0.1</code>
+</li>
+<li>Google Chrome <code>41.0.2272.89</code>
+</li>
+<li>Chromium <code>Not tested</code>
+</li>
+<li>
+<a href="http://splash.readthedocs.org/en/latest/">Splash</a> <code>1.5</code>
+</li>
+<li>
+<a href="http://ghost-py.readthedocs.org/en/latest/">Ghost.py</a> <code>0.1.1</code>
+</li>
+<li>
+<a href="https://github.com/ryanpetrello/python-zombie/">Zombie.js</a> <code>0.2.0</code>
+</li>
+<li>
+<a href="http://phantomjs.org/">Pantom.js</a> <code>1.9.8</code>, <code>2.0.0</code>
+</li>
+<li>
+<a href="http://slimerjs.org/">Slimer.js</a> <code>0.9.5</code>, <code>0.10.0pre</code>
+</li>
+</ul>
 
-        var SPLASH = {
-            label: "splash",
-            fillColor : "rgba(0,0,0,0.03)",
-            strokeColor : "rgba(0,0,0,1)",
-            pointColor : "rgba(0,0,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,0,0,1)",
-        }
+<p>Познакомимся с участниками по ближе:</p>
 
-        var GHOST = {
-            label: "ghost",
-            fillColor : "rgba(255,0,0,0.03)",
-            strokeColor : "rgba(255,0,0,1)",
-            pointColor : "rgba(255,0,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(255,0,0,1)",
-        }
+<ul>
+<li>
+<em>Firefox</em> —
+Наиболее массовый не WebKit браузер на сегодняшний день.</li>
+<li>
+<em>Google Chrome</em> / <em>Chromium</em> —
+Один из самых быстрых и популярных браузеров.</li>
+<li>
+<em>Splash</em> — легкий браузер с поддержкой javascript реализовыннй на
+python-е предоставляюший для управления http api.</li>
+<li>
+<em>Ghost.py</em> — python браузер с поддержкой javascript ориентированный на
+автоматическое функциональное тестирование.</li>
+<li>
+<em>Zombie.js</em> — легкий и быстрый безголовый браузер для автоматического
+тестирования основаный на node.js</li>
+<li>
+<em>Phantom.js</em> — быстрый безголовый браузер на движке WebKit со
+встроенной поддержкой svg. Управляется при помощи javascript api.</li>
+<li>
+<em>Slimer.js</em> — быстрый браузер, похожий на phantomjs, однако использует
+движек Gecko от firefox. Управляется при помощи javascript api.</li>
+</ul>
 
-        var PHANTOMJS2 = {
-            label: "phantomjs2",
-            fillColor : "rgba(30,144,255,0.03)",
-            strokeColor : "rgba(30,144,255,1)",
-            pointColor : "rgba(30,144,255,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(30,144,255,1)",
-        }
+<p>Итак, участники отобраны, и готовы показать себя во всей красе, что ж —
+приступим к соревнованиям.</p>
 
-        var PHANTOMJS = {
-            label: "phantomjs",
-            fillColor : "rgba(0,255,255,0.03)",
-            strokeColor : "rgba(0,255,255,1)",
-            pointColor : "rgba(0,255,255,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,255,255,1)",
-        }
+<h2>
+<a id="user-content-Трасса" class="anchor" href="#%D0%A2%D1%80%D0%B0%D1%81%D1%81%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Трасса</h2>
 
-        var AWESOMIUM = {
-            label: "awesomium",
-            fillColor : "rgba(255,0,255,0.03)",
-            strokeColor : "rgba(255,0,255,1)",
-            pointColor : "rgba(255,0,255,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(255,0,255,1)",
-        }
+<p><a href="/home/maks/s50/save_screenshot_test/im/rally.jpg" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/rally.jpg" alt="rally" style="max-width:100%;"></a></p>
 
-        var SLIMERJS = {
-            label: "slimerjs",
-            fillColor : "rgba(0,255,0,0.03)",
-            strokeColor : "rgba(0,255,0,1)",
-            pointColor : "rgba(0,255,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,255,0,1)",
-        }
+<p>Для наших, замечательных конкурсантов, предстоит пройти трек по пересеченной
+местности c четырьмя крутыми поворотами с 16-ю чекпоинтами, а именно:
+показать свои навыки на следующих ресурсах:</p>
 
-        var SLIMERJS10 = {
-            label: "slimerjs10",
-            fillColor : "rgba(0,128,0,0.03)",
-            strokeColor : "rgba(0,128,0,1)",
-            pointColor : "rgba(0,128,0,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,128,0,1)",
-        }
+<ul>
+<li><a href="https://google.com/">https://google.com/</a></li>
+<li><a href="https://www.facebook.com/">https://www.facebook.com/</a></li>
+<li><a href="http://habrahabr.ru/">http://habrahabr.ru/</a></li>
+<li><a href="http://wbtech.pro/">http://wbtech.pro/</a></li>
+</ul>
 
-        var PHANTOMJS_NOS = {
-            label: "phantomjs-no_selenium",
-            fillColor : "rgba(0,0,255,0.03)",
-            strokeColor : "rgba(0,0,255,1)",
-            pointColor : "rgba(0,0,255,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(0,0,255,1)",
-        }
+<p>при следующих разрешениях экранов по ширине: <code>240</code>, <code>780</code>, <code>1320</code>, <code>1920</code>
+пикселей.</p>
 
-        var PHANTOMJS2_NOS = {
-            label: "phantomjs2-no_selenium",
-            fillColor : "rgba(25,25,112,0.03)",
-            strokeColor : "rgba(25,25,112,1)",
-            pointColor : "rgba(25,25,112,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(25,25,112,1)",
-        }
+<h2>
+<a id="user-content-Заезд-первый--Качество" class="anchor" href="#%D0%97%D0%B0%D0%B5%D0%B7%D0%B4-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9--%D0%9A%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Заезд первый — «Качество»</h2>
 
-        var fox_min_mem = $.extend({}, FIREFOX);
-        var fox_max_mem = $.extend({}, FIREFOX);
-        var fox_avg_mem = $.extend({}, FIREFOX);
-        var fox_time = $.extend({}, FIREFOX);
-        fox_min_mem['data'] = ['57.51953125', '59.41015625', '59.6796875', '59.84375', '59.66796875', '59.66796875', '59.66796875', '59.67578125', '59.78515625', '59.78515625', '63.09375', '63.06640625', '63.2578125', '63.3125', '63.3125', '63.3125'];
-        fox_max_mem['data'] = ['287.5625', '292.8671875', '291.90234375', '296.72265625', '308.2421875', '305.6015625', '295.4453125', '295.94140625', '392.515625', '440.3046875', '442.421875', '471.03515625', '289.375', '296.4921875', '287.6171875', '287.87890625'];
-        fox_avg_mem['data'] = ['210.299330704', '214.881805654', '215.846502163', '217.294134298', '227.068700517', '222.908402402', '221.729256281', '220.072563591', '265.278598923', '288.298313949', '288.916726132', '296.593244596', '217.821538061', '220.567548838', '218.372563336', '217.157501515'];
-        fox_time['data'] = ['9.29280171394', '7.76297516823', '7.96619474888', '8.01676571369', '9.04521651268', '8.52571070194', '9.11036310196', '9.32324450016', '12.3039075136', '11.9718331099', '12.0818757057', '12.8998947144', '7.29799132347', '7.54998955727', '7.63910048008', '7.79855241776'];
+<blockquote>
+<p>Качество — это делать что-либо правильно, даже когда никто не смотрит.</p>
+</blockquote>
 
-        var g_chrome_min_mem = $.extend({}, G_CHROME);
-        var g_chrome_max_mem = $.extend({}, G_CHROME);
-        var g_chrome_avg_mem = $.extend({}, G_CHROME);
-        var g_chrome_time = $.extend({}, G_CHROME);
-        g_chrome_min_mem['data'] = ['57.45703125', '57.984375', '58.453125', '58.453125', '58.546875', '58.765625', '58.5', '58.5', '58.5078125', '58.30078125', '58.30078125', '58.30078125', '59.109375', '59.11328125', '59.11328125', '59.234375'];
-        g_chrome_max_mem['data'] = ['496.22265625', '499.33203125', '507.390625', '513.33984375', '496.94921875', '501.59765625', '507.40234375', '518.11328125', '517.91015625', '547.2421875', '565.07421875', '576.3359375', '498.73828125', '502.08203125', '505.265625', '517.46875'];
-        g_chrome_avg_mem['data'] = ['323.90861998', '329.803441971', '338.089536739', '346.877674779', '322.816981097', '330.567818557', '334.934174996', '338.241353796', '314.025968965', '318.779237195', '335.712547664', '350.518687057', '304.103393939', '310.792940629', '314.865538067', '323.694945602'];
-        g_chrome_time['data'] = ['5.71978607178', '6.13153793812', '5.87899470329', '6.06574497223', '5.3729470253', '5.79419119358', '5.53687875271', '5.56803386211', '4.93956372738', '5.22593576908', '5.51620557308', '6.15224640369', '4.79253337383', '4.92231812477', '4.84085221291', '5.36215744019'];
+<p>Поскольку, в конечном счете, результат должен быть не хуже, чем имеющийся на
+настоящий момент — эталоном качества будут выступать снимки <code>firefox</code>-а.</p>
 
-        var chromium_min_mem = $.extend({}, CHROMIUM);
-        var chromium_max_mem = $.extend({}, CHROMIUM);
-        var chromium_avg_mem = $.extend({}, CHROMIUM);
-        var chromium_time = $.extend({}, CHROMIUM);
-        chromium_min_mem['data'] = [];
-        chromium_max_mem['data'] = [];
-        chromium_avg_mem['data'] = [];
-        chromium_time['data'] = [];
+<p>На данном этапе сошли с дистанции сразу 4 участника. Причем, если бы я делал
+ставки, то проиграл бы, ведь хром, которого я считал фаворитом
+соревнований, оказался абсолютно некомпетентным участником.</p>
 
-        var splash_min_mem = $.extend({}, SPLASH);
-        var splash_max_mem = $.extend({}, SPLASH);
-        var splash_avg_mem = $.extend({}, SPLASH);
-        var splash_time = $.extend({}, SPLASH);
-        splash_min_mem['data'] = ['15.375', '15.4375', '15.4375', '15.4375', '15.4375', '15.4375', '15.4375', '15.4375', '15.4375', '15.34375', '15.33984375', '14.96484375', '14.96484375', '14.96484375', '14.96484375', '14.96484375'];
-        splash_max_mem['data'] = ['15.4375', '15.4375', '15.4375', '15.4375', '15.44140625', '15.4375', '15.4375', '15.44140625', '15.4375', '15.4375', '15.34375', '15.33984375', '14.96484375', '14.96484375', '14.96484375', '14.96484375'];
-        splash_avg_mem['data'] = ['15.41875', '15.4375', '15.4375', '15.4375', '15.4375229779', '15.4375', '15.4375', '15.4375332597', '15.4375', '15.4215539348', '15.3427734375', '15.0244026253', '14.96484375', '14.96484375', '14.96484375', '14.96484375'];
-        splash_time['data'] = ['1.40346360207', '1.48613700867', '1.64314851761', '1.91363563538', '1.59008984566', '1.71739721298', '1.89127027988', '2.32073099613', '2.52194685936', '3.48754360676', '5.35830161572', '8.8916254282', '1.35502793789', '1.43709375858', '1.70636732578', '2.16719059944'];
+<h4>
+<a id="user-content-Только-видимая-область" class="anchor" href="#%D0%A2%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Только видимая область</h4>
 
-        var ghost_min_mem = $.extend({}, GHOST);
-        var ghost_max_mem = $.extend({}, GHOST);
-        var ghost_avg_mem = $.extend({}, GHOST);
-        var ghost_time = $.extend({}, GHOST);
-        ghost_min_mem['data'] = [];
-        ghost_max_mem['data'] = [];
-        ghost_avg_mem['data'] = [];
-        ghost_time['data'] = [];
+<p>Для связки <code>selenium</code>-а и <code>google chrome</code>
+необходимо использовать <code>chromedriver</code> текущая стабильная версия <code>2.14</code>.
+И, как оказалось, в нем содержится баг, который тянется с 2013 года, известным
+<a href="https://code.google.com/p/chromedriver/issues/detail?id=294">issue</a>.
+Хром драйвер не пролистывает окно браузера при захвате изображения,
+а делает снимок видимой области.</p>
 
-        var phantomjs2_min_mem = $.extend({}, PHANTOMJS2);
-        var phantomjs2_max_mem = $.extend({}, PHANTOMJS2);
-        var phantomjs2_avg_mem = $.extend({}, PHANTOMJS2);
-        var phantomjs2_time = $.extend({}, PHANTOMJS2);
-        phantomjs2_min_mem['data'] = ['57.8203125', '58.7421875', '58.8125', '58.86328125', '58.65234375', '58.87890625', '58.88671875', '58.9453125', '58.95703125', '62.609375', '62.6328125', '97.66796875', '97.88671875', '97.88671875', '97.88671875', '97.88671875'];
-        phantomjs2_max_mem['data'] = ['228.921875', '233.66015625', '233.76171875', '236.265625', '224.80078125', '260.5859375', '234.41796875', '230.5546875', '287.21484375', '277.0859375', '316.89453125', '340.078125', '256.85546875', '261.2890625', '260.80859375', '265.20703125'];
-        phantomjs2_avg_mem['data'] = ['131.255107407', '133.343669884', '133.791692694', '134.779298695', '133.652330626', '133.700697943', '134.159340596', '134.136663913', '177.603508159', '178.04091016', '187.775289549', '227.165835424', '173.087356143', '174.953747331', '174.676914671', '177.352312981'];
-        phantomjs2_time['data'] = ['2.73822984695', '2.66407690048', '2.56250739098', '2.55795032978', '2.73078076839', '2.86119656563', '2.77869420052', '2.86394920349', '5.38108596802', '4.79345829487', '5.16334118843', '5.59498693943', '2.68351891041', '2.5996868372', '2.77748160362', '2.80392079353'];
+<blockquote>
+<p><a href="/home/maks/s50/save_screenshot_test/im/chrome.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/chrome.png" alt="chrome fail" style="max-width:100%;"></a></p>
+</blockquote>
 
-        var pantom_min_mem = $.extend({}, PHANTOMJS);
-        var pantom_max_mem = $.extend({}, PHANTOMJS);
-        var pantom_avg_mem = $.extend({}, PHANTOMJS);
-        var pantom_time = $.extend({}, PHANTOMJS);
-        pantom_min_mem['data'] = ['57.66796875', '58.64453125', '58.65234375', '58.7421875', '58.75', '58.7421875', '58.7421875', '58.56640625', '58.56640625', '58.56640625', '58.56640625', '58.56640625', '61.6484375', '61.6484375', '61.6484375', '61.6484375'];
-        pantom_max_mem['data'] = ['213.95703125', '222.84375', '225.83984375', '227.7890625', '216.83984375', '227.91015625', '223.0546875', '226.3359375', '285.3125', '283.93359375', '298.47265625', '307.9453125', '211.3046875', '181.59375', '215.30859375', '218.1953125'];
-        pantom_avg_mem['data'] = ['124.599474327', '126.726486845', '129.68963763', '131.309354181', '128.050248147', '129.74143255', '129.838363684', '130.052021994', '177.321901222', '173.7306141', '181.520918631', '192.29892043', '129.388915932', '128.49546131', '130.972538724', '132.348366514'];
-        pantom_time['data'] = ['3.33461923599', '2.64778199196', '2.67715289593', '2.84830794334', '2.94201140404', '3.12734394073', '3.08298749924', '3.10927951336', '4.97299025059', '4.79050142765', '5.0937731266', '5.51990280151', '2.38915302753', '2.44013597965', '2.54947547913', '2.74255979061'];
+<p>Так что <code>Google Chrome</code> и <code>Chromium</code> не прошли данный этап.</p>
 
-        var awesomium_min_mem = $.extend({}, AWESOMIUM);
-        var awesomium_max_mem = $.extend({}, AWESOMIUM);
-        var awesomium_avg_mem = $.extend({}, AWESOMIUM);
-        var awesomium_time = $.extend({}, AWESOMIUM);
-        awesomium_min_mem['data'] = [];
-        awesomium_max_mem['data'] = [];
-        awesomium_avg_mem['data'] = [];
-        awesomium_time['data'] = [];
+<h4>
+<a id="user-content-Неверный-resize" class="anchor" href="#%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-resize" aria-hidden="true"><span class="octicon octicon-link"></span></a>Неверный resize</h4>
 
-        var slimerjs_min_mem = $.extend({}, SLIMERJS);
-        var slimerjs_max_mem = $.extend({}, SLIMERJS);
-        var slimerjs_avg_mem = $.extend({}, SLIMERJS);
-        var slimerjs_time = $.extend({}, SLIMERJS);
-        slimerjs_min_mem['data'] = ['57.76953125', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625', '57.9140625'];
-        slimerjs_max_mem['data'] = ['267.78515625', '266.58984375', '271.10546875', '281.0234375', '284.8984375', '281.35546875', '281.7109375', '285.4609375', '403.01953125', '394.69921875', '414.16796875', '450.44140625', '243.55859375', '247.1875', '253.26171875', '259.65625'];
-        slimerjs_avg_mem['data'] = ['200.702593128', '200.588082643', '202.421953239', '205.232973811', '208.339219234', '208.643609047', '208.66535544', '208.596524038', '257.706318653', '256.816427542', '260.68009999', '286.41849526', '190.456565739', '191.250788947', '192.584954684', '194.637746241'];
-        slimerjs_time['data'] = ['4.39690306187', '3.5953312397', '3.68906276226', '3.98432097435', '4.30194294453', '4.19800000191', '4.32255833149', '4.48725349903', '5.83087739944', '5.54539122581', '5.98717346191', '6.44164443016', '3.50296916962', '3.50648863316', '3.50514521599', '3.99715020657'];
+<p>Безголовый браузер <code>Splash</code>, запускается демоном и слушает <code>localhost:8050</code>, по
+которому предоставляет <code>http api</code> управления браузером. Для сохранения скриншота
+необходимо указать адрес сайта и ширину окна браузера.</p>
 
-        var slimerjs10_min_mem = $.extend({}, SLIMERJS10);
-        var slimerjs10_max_mem = $.extend({}, SLIMERJS10);
-        var slimerjs10_avg_mem = $.extend({}, SLIMERJS10);
-        var slimerjs10_time = $.extend({}, SLIMERJS10);
-        slimerjs10_min_mem['data'] = ['58.1796875', '58.32421875', '58.32421875', '58.32421875', '58.32421875', '58.32421875', '58.32421875', '58.32421875', '58.32421875', '58.328125', '58.328125', '58.328125', '58.328125', '58.328125', '58.328125', '58.328125'];
-        slimerjs10_max_mem['data'] = ['258.30078125', '253.97265625', '260.94140625', '266.4921875', '261.55859375', '268.98828125', '268.796875', '280.6875', '415.7421875', '404.92578125', '418.59375', '480.63671875', '250.78515625', '249.3359375', '254.09375', '262.44921875'];
-        slimerjs10_avg_mem['data'] = ['194.324623034', '195.522781234', '196.151648992', '198.362083891', '198.893542753', '199.373150986', '200.811052984', '208.111080106', '258.216557083', '260.58229163', '267.800769728', '297.724209103', '191.378782438', '192.566535175', '194.415589111', '196.318028488'];
-        slimerjs10_time['data'] = ['4.13471560478', '3.83870270252', '3.89674685001', '4.1415116787', '4.20064232349', '4.38248586655', '4.47859532833', '5.20726921558', '6.56752169132', '6.45744941235', '6.88453192711', '9.92854173183', '5.43037421703', '4.16022388935', '4.29186251163', '4.31718957424'];
+<div class="highlight highlight-python"><pre>request <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>http://localhost:8050/render.png?<span class="pl-cce">\</span></span>
+<span class="pl-s">url=<span class="pl-c1">{url}</span>&amp;width=<span class="pl-c1">{res}</span>&amp;render_all=1&amp;wait=1<span class="pl-pds">'</span></span>.format(<span class="pl-smi">url</span><span class="pl-k">=</span>url, <span class="pl-smi">res</span><span class="pl-k">=</span>res)
+res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span class="pl-pds">'</span>curl<span class="pl-pds">'</span></span>, request, <span class="pl-s"><span class="pl-pds">'</span>-o<span class="pl-pds">'</span></span>, save_as])</pre></div>
 
-        var phantomjs_nos_min_mem = $.extend({}, PHANTOMJS_NOS);
-        var phantomjs_nos_max_mem = $.extend({}, PHANTOMJS_NOS);
-        var phantomjs_nos_avg_mem = $.extend({}, PHANTOMJS_NOS);
-        var phantomjs_nos_time = $.extend({}, PHANTOMJS_NOS);
-        phantomjs_nos_min_mem['data'] = ['57.7578125', '57.31640625', '57.31640625', '57.30078125', '57.30078125', '50.73828125', '34.2421875', '34.08984375', '33.828125', '33.84375', '33.84375', '33.84375', '33.84375', '33.84375', '33.84375', '33.84375'];
-        phantomjs_nos_max_mem['data'] = ['219.31640625', '214.8046875', '216.1328125', '219.6484375', '212.2421875', '211.48828125', '189.578125', '194.171875', '257.20703125', '253.48046875', '258.94921875', '273.55078125', '180.0', '186.16015625', '187.69921875', '188.37890625'];
-        phantomjs_nos_avg_mem['data'] = ['131.670365073', '127.758484909', '129.343963655', '130.774784537', '127.410987663', '128.806087798', '104.341394853', '107.257089286', '152.993849462', '158.275862943', '161.196604224', '174.474177281', '99.7483057324', '103.507046878', '103.637850222', '105.620699295'];
-        phantomjs_nos_time['data'] = ['3.06231226921', '2.64720709324', '2.46827688217', '2.56695349216', '2.063539958', '2.85570938587', '2.86592776775', '2.31111850739', '6.32319159508', '5.0160172224', '4.55430297852', '5.43175292015', '1.81632361412', '2.04054441452', '1.99148631096', '2.0746994257'];
+<p>Однако, как оказалось, ширина окна браузера всегда 1024px, а параметр
+<code>width</code> влияет только на фактическую ширину полученного изображения,
+к тому же сжатого как thumbnail.</p>
 
-        var phantomjs2_nos_min_mem = $.extend({}, PHANTOMJS2_NOS);
-        var phantomjs2_nos_max_mem = $.extend({}, PHANTOMJS2_NOS);
-        var phantomjs2_nos_avg_mem = $.extend({}, PHANTOMJS2_NOS);
-        var phantomjs2_nos_time = $.extend({}, PHANTOMJS2_NOS);
-        phantomjs2_nos_min_mem['data'] = ['57.73046875', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375', '57.859375'];
-        phantomjs2_nos_max_mem['data'] = ['224.8046875', '223.57421875', '209.77734375', '228.265625', '226.4375', '223.02734375', '217.62109375', '258.73828125', '263.82421875', '265.1875', '268.50390625', '284.921875', '206.79296875', '209.796875', '209.3984375', '213.984375'];
-        phantomjs2_nos_avg_mem['data'] = ['127.231317074', '129.084537122', '129.446651603', '131.361211623', '128.03553478', '127.780402555', '127.209328406', '131.926942137', '169.148834365', '170.180055112', '176.063445798', '187.735124869', '122.760366587', '125.091002747', '127.177092634', '128.653984375'];
-        phantomjs2_nos_time['data'] = ['2.28697268963', '2.03651404381', '2.04790878296', '2.08723666668', '1.91014184952', '1.93685843945', '1.84506719112', '2.79357130527', '3.7008752346', '3.6100086689', '3.755864501', '4.49910318851', '1.39852902889', '1.5189193964', '1.57745428085', '1.69512104988'];
+<blockquote>
+<p>240px<br><a href="/home/maks/s50/save_screenshot_test/im/splash.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/splash.png" alt="splash" style="max-width:100%;"></a></p>
 
-        var memory_min_data = {
-            labels : LABELS,
-            datasets : [fox_min_mem, g_chrome_min_mem, chromium_min_mem, splash_min_mem, ghost_min_mem, phantomjs2_min_mem, pantom_min_mem, awesomium_min_mem, slimerjs_min_mem, slimerjs10_min_mem, phantomjs_nos_min_mem, phantomjs2_nos_min_mem]
-        };
+<hr>
 
-        var memory_max_data = {
-            labels : LABELS,
-            datasets : [fox_max_mem, g_chrome_max_mem, chromium_max_mem, splash_max_mem, ghost_max_mem, phantomjs2_max_mem, pantom_max_mem, awesomium_max_mem, slimerjs_max_mem, slimerjs10_max_mem, phantomjs_nos_max_mem, phantomjs2_nos_max_mem]
-        };
+<p>780px<br><a href="/home/maks/s50/save_screenshot_test/im/splash_big.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/splash_big.png" alt="splash big" style="max-width:100%;"></a></p>
+</blockquote>
 
-        var memory_avg_data = {
-            labels : LABELS,
-            datasets : [fox_avg_mem, g_chrome_avg_mem, chromium_avg_mem, splash_avg_mem, ghost_avg_mem, phantomjs2_avg_mem, pantom_avg_mem, awesomium_avg_mem, slimerjs_avg_mem, slimerjs10_avg_mem, phantomjs_nos_avg_mem, phantomjs2_nos_avg_mem]
-        };
+<p>Так что splash не прошел данный этап.</p>
 
-        var time_data = {
-            labels : LABELS,
-            datasets : [fox_time, g_chrome_time, chromium_time, splash_time, ghost_time, phantomjs2_time, pantom_time, awesomium_time, slimerjs_time, slimerjs10_time, phantomjs_nos_time, phantomjs2_nos_time]
-        };
+<h4>
+<a id="user-content-Что-я-вообще-сдесь-делаю--zombie" class="anchor" href="#%D0%A7%D1%82%D0%BE-%D1%8F-%D0%B2%D0%BE%D0%BE%D0%B1%D1%89%D0%B5-%D1%81%D0%B4%D0%B5%D1%81%D1%8C-%D0%B4%D0%B5%D0%BB%D0%B0%D1%8E--zombie" aria-hidden="true"><span class="octicon octicon-link"></span></a>«Что я вообще сдесь делаю» © Zombie</h4>
 
-        Chart.defaults.global.bezierCurve = false;
-        Chart.defaults.global.responsive = true;
-        Chart.defaults.global.animation = false;
+<p><a href="/home/maks/s50/save_screenshot_test/im/zombie.jpg" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/zombie.jpg" alt="zombie" style="max-width:100%;"></a></p>
 
-        var browsers = [FIREFOX, G_CHROME, CHROMIUM, SPLASH, GHOST, PHANTOMJS2, PHANTOMJS, AWESOMIUM, SLIMERJS, SLIMERJS10, PHANTOMJS_NOS, PHANTOMJS2_NOS];
+<p>Как оказалось, зомби вообще не умеет делать скриншоты, поэтому выбывает из
+соревнований.</p>
 
-        var legends = function() {
-            for (index in browsers){
-                if (!time_data.datasets[index].data.length) {continue; }
+<h4>
+<a id="user-content-Фальшивые-паспорта--старый-гугл" class="anchor" href="#%D0%A4%D0%B0%D0%BB%D1%8C%D1%88%D0%B8%D0%B2%D1%8B%D0%B5-%D0%BF%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0--%D1%81%D1%82%D0%B0%D1%80%D1%8B%D0%B9-%D0%B3%D1%83%D0%B3%D0%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>Фальшивые паспорта — старый гугл</h4>
 
-                var browser = browsers[index];
-                $('ul.browsers').append('<li class={class} />'.replace('{class}', browser['label']));
-                var li = $('li.{class}'.replace('{class}', browser['label']));
-                li.html('<span style="color:{color}"><strong>{text}</strong></span>'.replace(
-                    '{color}', browser['strokeColor']).replace('{text}', browser['label'].toUpperCase()));
-            } 
-        };
+<p>Некоторые из участников соревнований, а именно <code>Phantom.js</code> и <code>Slimer.js</code>,
+не смогли бы пройти все этапы ралли, под своими именами, поэтому пришлось
+выдать им фальшивые паспорта.</p>
 
-        window.onload = function(){
-            // set legends
-            legends();
-            // memory minimal usage
-            var memory_min = document.getElementById("canvas-memory_min").getContext("2d");
-            window.myLine = new Chart(memory_min).Line(memory_min_data, {bezierCurve: false});
-            // memory maximal usage
-            var memory_max = document.getElementById("canvas-memory_max").getContext("2d");
-            window.myLine = new Chart(memory_max).Line(memory_max_data, {bezierCurve: false});
-            // memory avg usage
-            var memory_avg = document.getElementById("canvas-memory_avg").getContext("2d");
-            window.myLine = new Chart(memory_avg).Line(memory_avg_data, {bezierCurve: false});
-            // time usage
-            var time_usage = document.getElementById("canvas-time").getContext("2d");
-            window.myLine = new Chart(time_usage).Line(time_data, {bezierCurve: false});
-        }
-    </script>
+<p>Google выдает различные версии сайта, в зависимости от того: какой user agent у
+браузера запрашивающего страницу, и если этот агент неизвестный или старый, то
+выдается старая версия гугл, с черной полоской меню.</p>
+
+<blockquote>
+<p>Phantom.js 240px<br><a href="/home/maks/s50/save_screenshot_test/im/old_google_phantom.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/old_google_phantom.png" alt="old google" style="max-width:100%;"></a></p>
+
+<hr>
+
+<p>Slimer.js 240px<br><a href="/home/maks/s50/save_screenshot_test/im/old_google_slimer.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/old_google_slimer.png" alt="old google 2" style="max-width:100%;"></a></p>
+</blockquote>
+
+<p>Но при использовании поддельных паспортов, от <code>firefox</code> результат такой как
+нужно.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-s"><span class="pl-pds">'</span>Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/36.0<span class="pl-pds">'</span></span></pre></div>
+
+<blockquote>
+<p><a href="/home/maks/s50/save_screenshot_test/im/google.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/google.png" alt="google ok" style="max-width:100%;"></a></p>
+</blockquote>
+
+<h4>
+<a id="user-content-Пикселизация--выколи-глаза" class="anchor" href="#%D0%9F%D0%B8%D0%BA%D1%81%D0%B5%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F--%D0%B2%D1%8B%D0%BA%D0%BE%D0%BB%D0%B8-%D0%B3%D0%BB%D0%B0%D0%B7%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Пикселизация — выколи глаза.</h4>
+
+<p><code>Ghost.py</code> не очень хорошо умеет захватывать картинки, логотип google выглядит
+похожим на забор.</p>
+
+<blockquote>
+<p><a href="/home/maks/s50/save_screenshot_test/im/ghost.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/ghost.png" alt="ghost" style="max-width:100%;"></a></p>
+</blockquote>
+
+<p>Хоть это и недопустимо, однако, ограничимся предупреждением, и пропустим
+призрака в следующий тур.</p>
+
+<h3>
+<a id="user-content-Результаты-первого-заезда" class="anchor" href="#%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B-%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B7%D0%B0%D0%B5%D0%B7%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Результаты первого заезда</h3>
+
+<p>Во второй тур прошли 4 участника и 4 участника покинули соревнования.
+Турнирная таблица по окончанию первого этапа.</p>
+
+<ul>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Firefox</li>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Pantom.js</li>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Slimer.js</li>
+<li>
+<img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> Ghost.py</li>
+<li>
+<img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> Chromium</li>
+<li>
+<img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> Google Chrome</li>
+<li>
+<img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> Splash</li>
+<li>
+<img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> Zombie.js</li>
+</ul>
+
+<h2>
+<a id="user-content-Заезд-второй--Скорость" class="anchor" href="#%D0%97%D0%B0%D0%B5%D0%B7%D0%B4-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9--%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Заезд второй — «Скорость»</h2>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/speed.jpg" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/speed.jpg" alt="speed" style="max-width:100%;"></a></p>
+
+<p>На данном этапе измерялось время, необходимое для создания браузера,
+открытия нужной страницы, изменения ширины окна до заданной, сохранения страницы
+как изображения PNG, закрытия страницы и уничтожения объекта браузера.</p>
+
+<p>Измерения проводились при помощи стандартной библиотеки <code>time</code>, как разница
+времени между началом запуска функции и её окончания.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">import</span> time
+<span class="pl-c"># ...</span>
+    start <span class="pl-k">=</span> time.time()
+    <span class="pl-c"># call test browser fun()</span>
+    end <span class="pl-k">=</span> time.time()
+<span class="pl-c"># ...</span>
+    times.append(end <span class="pl-k">-</span> start)</pre></div>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/time.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/time.png" alt="time" style="max-width:100%;"></a>
+&lt; тут интерактивный график вместо скриншота &gt;</p>
+
+<h3>
+<a id="user-content-Результаты-второго-заезда" class="anchor" href="#%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE-%D0%B7%D0%B0%D0%B5%D0%B7%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Результаты второго заезда</h3>
+
+<p>В ходе данного этапа, участники заняли следующие места:</p>
+
+<ol>
+<li>Phantom.js <code>2.x</code>
+</li>
+<li>Phantom.js <code>1.x</code>
+</li>
+<li>Ghost.py</li>
+<li>Phantom.js <code>1.x</code> + selenium</li>
+<li>Phantom.js <code>2.x</code> + selenium</li>
+<li>Slimer.js <code>9.x</code>
+</li>
+<li>Slimer.js <code>10.x</code>
+</li>
+<li>Firefox + selenium</li>
+</ol>
+
+<p>В результате, ни один из участников не оказался значительно хуже чем <code>firefox</code>,
+поэтому выбывших нет, все переходят к следующему этапу.</p>
+
+<h2>
+<a id="user-content-Заезд-третий--Ресурсы" class="anchor" href="#%D0%97%D0%B0%D0%B5%D0%B7%D0%B4-%D1%82%D1%80%D0%B5%D1%82%D0%B8%D0%B9--%D0%A0%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Заезд третий — «Ресурсы»</h2>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/fuel.jpg" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/fuel.jpg" alt="fuel" style="max-width:100%;"></a></p>
+
+<p>Учитывалась память, которую тратит главный процесс, и все его дочерние процессы.
+Память измерялась при помощи функции <code>memory_usage</code> библиотеки <code>memory_profiler</code>
+с указанием параметра <code>include_children</code>.</p>
+
+<p>Измерялась минимальная, средняя, и максимальная память для каждого скриншота.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">from</span> memory_profiler <span class="pl-k">import</span> memory_usage
+<span class="pl-c"># ...</span>
+    memory <span class="pl-k">=</span> memory_usage((fun, args), <span class="pl-smi">include_children</span><span class="pl-k">=</span><span class="pl-c1">True</span>)
+<span class="pl-c"># ...</span>
+    mins.append(<span class="pl-c1">min</span>(memory))
+    maxs.append(<span class="pl-c1">max</span>(memory))
+    avgs.append(avg(memory))</pre></div>
+
+<h4>
+<a id="user-content-Ненасытное-привидение" class="anchor" href="#%D0%9D%D0%B5%D0%BD%D0%B0%D1%81%D1%8B%D1%82%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%B8%D0%B2%D0%B8%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ненасытное привидение</h4>
+
+<p><code>Ghost.py</code> — оказался чрезвычайно прожорливым, занимая всю доступную
+память, доходил до максимума и вылетал. Единственный из участников, кто не
+сумел пройти все 16 чекпоинтов за один подход.</p>
+
+<p>Учитывая вынесенное ранее предупреждение, призрак вылетает из конкурса!</p>
+
+<blockquote>
+<p>I ain't afraid of no ghosts</p>
+</blockquote>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/ghostbusters.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/ghostbusters.png" alt="ghostbusters" style="max-width:100%;"></a></p>
+
+<h4>
+<a id="user-content-Двуличный-хитрец" class="anchor" href="#%D0%94%D0%B2%D1%83%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D1%85%D0%B8%D1%82%D1%80%D0%B5%D1%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>Двуличный хитрец</h4>
+
+<p>Оказалось, что <code>Slimer.js</code> притворяется: запускается дочерний процесс <code>slimerjs</code>,
+который потребляет не более 3 Mb памяти, но при этом запускает ещё один
+дочерний процесс с именем <code>firefox</code>, который уже добирает память до 300 Mb.</p>
+
+<h4>
+<a id="user-content-Общие-затраты-памяти" class="anchor" href="#%D0%9E%D0%B1%D1%89%D0%B8%D0%B5-%D0%B7%D0%B0%D1%82%D1%80%D0%B0%D1%82%D1%8B-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Общие затраты памяти</h4>
+
+<p>Поскольку <code>Ghost.py</code> потребляет уж слишком много ресурсов, на графиках не
+указывается.</p>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/max.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/max.png" alt="memory max" style="max-width:100%;"></a>
+&lt; тут интерактивный график вместо скриншота &gt;</p>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/avg.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/avg.png" alt="memory avg" style="max-width:100%;"></a>
+&lt; тут интерактивный график вместо скриншота &gt;</p>
+
+<h3>
+<a id="user-content-Результаты-третьего-заезда" class="anchor" href="#%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B-%D1%82%D1%80%D0%B5%D1%82%D1%8C%D0%B5%D0%B3%D0%BE-%D0%B7%D0%B0%D0%B5%D0%B7%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Результаты третьего заезда</h3>
+
+<p>В ходе данного этапа, участники заняли следующие места:</p>
+
+<ol>
+<li>Phantom.js <code>1.x</code>
+</li>
+<li>Phantom.js <code>2.x</code>
+</li>
+<li>Phantom.js <code>1.x</code> + selenium</li>
+<li>Phantom.js <code>2.x</code> + selenium</li>
+<li>Slimer.js <code>9.x</code>
+</li>
+<li>Slimer.js <code>10.x</code>
+</li>
+<li>Firefox + selenium</li>
+<li>Ghost.py</li>
+</ol>
+
+<p>На этом этапе выбывает <code>Ghost.py</code>, турнирная таблица принимает вид:</p>
+
+<ul>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Pantom.js</li>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Slimer.js</li>
+<li>
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> Firefox</li>
+<li>
+<img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> Ghost.py</li>
+</ul>
+
+<h2>
+<a id="user-content-Заезд-четвертый--Управляемость" class="anchor" href="#%D0%97%D0%B0%D0%B5%D0%B7%D0%B4-%D1%87%D0%B5%D1%82%D0%B2%D0%B5%D1%80%D1%82%D1%8B%D0%B9--%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D0%BC%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Заезд четвертый — «Управляемость»</h2>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/wet_road.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/wet_road.png" alt="wet road" style="max-width:100%;"></a></p>
+
+<p>Несмотря на то, что определилась тройка лидеров и уже можно подвести итоги,
+рассмотрим как управлять безголовыми браузерами.</p>
+
+<h4>
+<a id="user-content-firefox" class="anchor" href="#firefox" aria-hidden="true"><span class="octicon octicon-link"></span></a>Firefox</h4>
+
+<p><code>Firefox</code> работает в связке с <code>selenium</code>-ом и управляется достаточно просто,
+единственная особенность — это то, что браузер запускает графическую
+оболочку, поэтому нужно использовать виртуальный дисплей.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">from</span> selenium <span class="pl-k">import</span> webdriver
+<span class="pl-k">from</span> pyvirtualdisplay <span class="pl-k">import</span> Display
+<span class="pl-c"># ...</span>
+<span class="pl-k">with</span> Display(<span class="pl-smi">visible</span><span class="pl-k">=</span><span class="pl-c1">0</span>, <span class="pl-smi">size</span><span class="pl-k">=</span>(<span class="pl-c1">1024</span>, <span class="pl-c1">768</span>), <span class="pl-smi">backend</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>xvfb<span class="pl-pds">'</span></span>):
+    browser <span class="pl-k">=</span> Browser(<span class="pl-k">**</span>param)
+    browser.set_window_size(width, <span class="pl-c1">768</span>)
+    browser.get(url)
+    browser.save_screenshot(save_as)
+    browser.quit()</pre></div>
+
+<h4>
+<a id="user-content-phantom" class="anchor" href="#phantom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Phantom</h4>
+
+<p><code>Phantom.js</code> можно использовать, как самостоятельный безголовый браузер, так и
+в связке с <code>selenium</code>-ом.
+Работа с <code>selenium</code>-ом аналогична <code>firefox</code>, за тем лишь исключением, что нет
+необходимости запускать виртуальный дисплей.</p>
+
+<p>Собственная работа <code>phantom.js</code>, заключается в вызове консольной команды,
+и передаче ей скрипта для выполнения браузером.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> page <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>webpage<span class="pl-pds">'</span></span>).create();
+page.settings.<span class="pl-c1">userAgent</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Mozilla/5.0 (X11; Linux x86_64) Firefox/36.0<span class="pl-pds">'</span></span>;
+page.viewportSize <span class="pl-k">=</span> { width<span class="pl-k">:</span><span class="pl-c1">1920</span>, height<span class="pl-k">:</span><span class="pl-c1">768</span> };
+page.<span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">'</span>http://wbtech.pro/<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">status</span>) {
+    page.render(<span class="pl-s"><span class="pl-pds">'</span>img/phantomjs2-no_selenium/wbtech.pro-1920px.png<span class="pl-pds">'</span></span>);
+    phantom.exit();
+});</pre></div>
+
+<p>В python запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">import</span> subprocess
+<span class="pl-c"># ...</span>
+subprocess.check_call([phantom_path, script_path, <span class="pl-s"><span class="pl-pds">'</span>--ssl-protocol=any<span class="pl-pds">'</span></span>])</pre></div>
+
+<h4>
+<a id="user-content-slimer" class="anchor" href="#slimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slimer</h4>
+
+<p><code>Slimer.js</code> работает точно так же, как и <code>phantom.js</code> без <code>selenium</code>-а,
+но является не совсем безголовым, он запускает графическую оболочку, поэтому
+требует виртуальный дисплей.</p>
+
+<p>А так же, в ходе тестирования было выявлено, что для корректного скриншота
+нужно всегда, перед открытием страницы, указывать базовую ширину окна
+браузера.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> page <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>webpage<span class="pl-pds">'</span></span>).create();
+page.viewportSize <span class="pl-k">=</span> { width<span class="pl-k">:</span><span class="pl-c1">1024</span>, height<span class="pl-k">:</span><span class="pl-c1">768</span> };
+page.settings.<span class="pl-c1">userAgent</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Mozilla/5.0 (X11; Linux x86_64) Firefox/36.0<span class="pl-pds">'</span></span>;
+page.<span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">'</span>http://wbtech.pro/<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">status</span>) {
+    page.viewportSize <span class="pl-k">=</span> { width<span class="pl-k">:</span><span class="pl-c1">1920</span>, height<span class="pl-k">:</span><span class="pl-c1">768</span> };
+    page.render(<span class="pl-s"><span class="pl-pds">'</span>img/slimerjs10/wbtech.pro-1920px.png<span class="pl-pds">'</span></span>);
+    page.<span class="pl-c1">close</span>();
+    slimer.exit();
+});</pre></div>
+
+<p>В python запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">from</span> pyvirtualdisplay <span class="pl-k">import</span> Display
+<span class="pl-k">import</span> subprocess
+<span class="pl-c"># ...</span>
+<span class="pl-k">with</span> Display(<span class="pl-smi">visible</span><span class="pl-k">=</span><span class="pl-c1">0</span>, <span class="pl-smi">size</span><span class="pl-k">=</span>(<span class="pl-c1">1024</span>, <span class="pl-c1">768</span>), <span class="pl-smi">backend</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>xvfb<span class="pl-pds">'</span></span>):
+    subprocess.check_call([slimer_path, script_path, <span class="pl-s"><span class="pl-pds">'</span>--ssl-protocol=any<span class="pl-pds">'</span></span>])</pre></div>
+
+<h2>
+<a id="user-content-Финиш" class="anchor" href="#%D0%A4%D0%B8%D0%BD%D0%B8%D1%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>Финиш</h2>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/chess_flag.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/chess_flag.png" alt="chess flag" style="max-width:100%;"></a></p>
+
+<p>Гонка завершилась, пришло время подвести итоги и определить победителей.</p>
+
+<p>До финиша доехали всего три команды, так что тройка лидеров очевидна. Учитывая
+затраты ресурсов и времени, участники занимают следующие места:</p>
+
+<ol>
+<li>Phantom.js <code>2.x</code>
+</li>
+<li>Phantom.js <code>1.x</code>
+</li>
+<li>Phantom.js <code>1.x</code> + selenium</li>
+<li>Phantom.js <code>2.x</code> + selenium</li>
+<li>Slimer.js <code>9.x</code>
+</li>
+<li>Slimer.js <code>10.x</code>
+</li>
+<li>Firefox + selenium</li>
+</ol>
+
+<p>Безоговорочным лидером гонки стал <code>phantom.js</code>, в качестве награды ему будет
+предложено занять пост огненной лисы, на сервисе <a href="http://coment.me/">coment.me</a>.</p>
+
+<p><a href="/home/maks/s50/save_screenshot_test/im/pedestal.png" target="_blank"><img src="/home/maks/s50/save_screenshot_test/im/pedestal.png" alt="pedestal" style="max-width:100%;"></a></p>
+</article>
 </body>
 </html>
