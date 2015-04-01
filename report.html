@@ -44,9 +44,9 @@
     <li><em>Google Chrome</em> / <em>Chromium</em> &mdash; один из самых быстрых и популярных браузеров.</li>
     <li><em>Splash</em> &mdash; легкий браузер с поддержкой javascript реализовыннй на python-е предоставляюший для управления http api.</li>
     <li><em>Ghost.py</em> &mdash; python браузер с поддержкой javascript ориентированный на автоматическое функциональное тестирование.</li>
-    <li><em>Zombie.js</em> &mdash; легкий и быстрый безголовый браузер для автоматического тестирования основаный на node.js</li>
+    <li><em>Zombie.js</em> &mdash; легкий и быстрый безголовый браузер для автоматического тестирования основаный на node.js.</li>
     <li><em>Phantom.js</em> &mdash; быстрый безголовый браузер на движке WebKit со встроенной поддержкой svg. Управляется при помощи javascript api.</li>
-    <li><em>Slimer.js</em> &mdash; быстрый браузер, похожий на phantomjs, однако использует движек Gecko от firefox. Управляется при помощи javascript api.</li>
+    <li><em>Slimer.js</em> &mdash; быстрый браузер, похожий на phantom.js, однако использует движок Gecko от firefox. Управляется при помощи javascript api.</li>
 </ul>
 
 <p>Итак, участники отобраны, и готовы показать себя во всей красе, что ж &mdash; приступим к соревнованиям.</p>
@@ -55,7 +55,7 @@
 
 <p><img src="im/rally.jpg" alt="rally"></p>
 
-<p>Для наших, замечательных конкурсантов, предстоит пройти трек по пересеченной местности c четырьмя крутыми поворотами с 16-ю чекпоинтами, а именно: показать свои навыки на следующих ресурсах:</p>
+<p>Для наших замечательных конкурсантов, предстоит пройти трек по пересеченной местности c четырьмя крутыми поворотами с 16-ю чекпоинтами, а именно: показать свои навыки на следующих ресурсах:</p>
 
 <ul>
     <li><a href="https://google.com/">https://google.com/</a></li>
@@ -131,7 +131,7 @@ res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span 
     <p><img src="im/google.png" alt="google ok" class="screenshot"></p>
 </blockquote>
 
-<h4>Пикселизация &mdash; выколи глаза.</h4>
+<h4>Пикселизация &mdash; выколи глаза</h4>
 
 <p><code>Ghost.py</code> не очень хорошо умеет захватывать картинки, логотип google выглядит похожим на забор.</p>
 
@@ -312,7 +312,7 @@ subprocess.check_call([phantom_path, script_path, <span class="pl-s"><span class
 
 <p><code>Slimer.js</code> работает точно так же, как и <code>phantom.js</code> без <code>selenium</code>-а, но является не совсем безголовым, он запускает графическую оболочку, поэтому требует виртуальный дисплей.</p>
 
-<p>А так же, в ходе тестирования было <a href="http://stackoverflow.com/questions/29280104/slimerjs-takes-a-snapshot-of-only-the-visible-area/">выявлено</a>, что для корректного скриншота нужно всегда, перед открытием страницы, указывать базовую ширину окна браузера.</p>
+<p>А также, в ходе тестирования было <a href="http://stackoverflow.com/questions/29280104/slimerjs-takes-a-snapshot-of-only-the-visible-area/">выявлено</a>, что для корректного скриншота нужно всегда, перед открытием страницы, указывать базовую ширину окна браузера.</p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> page <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>webpage<span class="pl-pds">'</span></span>).create();
 page.viewportSize <span class="pl-k">=</span> { width<span class="pl-k">:</span><span class="pl-c1">1024</span>, height<span class="pl-k">:</span><span class="pl-c1">768</span> };
