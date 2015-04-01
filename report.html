@@ -40,13 +40,13 @@
 <p>Познакомимся с участниками поближе:</p>
 
 <ul>
-    <li><em>Firefox</em> &mdash; наиболее массовый не WebKit браузер на сегодняшний день.</li>
+    <li><em>Firefox</em> &mdash; наиболее массовый не <code>WebKit</code> браузер на сегодняшний день.</li>
     <li><em>Google Chrome</em> / <em>Chromium</em> &mdash; один из самых быстрых и популярных браузеров.</li>
-    <li><em>Splash</em> &mdash; легкий браузер с поддержкой javascript реализовыннй на python-е предоставляюший для управления http api.</li>
-    <li><em>Ghost.py</em> &mdash; python браузер с поддержкой javascript ориентированный на автоматическое функциональное тестирование.</li>
-    <li><em>Zombie.js</em> &mdash; легкий и быстрый безголовый браузер для автоматического тестирования основаный на node.js.</li>
-    <li><em>Phantom.js</em> &mdash; быстрый безголовый браузер на движке WebKit со встроенной поддержкой svg. Управляется при помощи javascript api.</li>
-    <li><em>Slimer.js</em> &mdash; быстрый браузер, похожий на phantom.js, однако использует движок Gecko от firefox. Управляется при помощи javascript api.</li>
+    <li><em>Splash</em> &mdash; легкий браузер с поддержкой <code>javascript</code> реализовыннй на <code>python</code>-е предоставляюший для управления <code>http api</code>.</li>
+    <li><em>Ghost.py</em> &mdash; <code>python</code> браузер с поддержкой <code>javascript</code> ориентированный на автоматическое функциональное тестирование.</li>
+    <li><em>Zombie.js</em> &mdash; легкий и быстрый безголовый браузер для автоматического тестирования основаный на <code>node.js</code>.</li>
+    <li><em>Phantom.js</em> &mdash; быстрый безголовый браузер на движке <code>WebKit</code> со встроенной поддержкой <code>svg</code>. Управляется при помощи <code>javascript api</code>.</li>
+    <li><em>Slimer.js</em> &mdash; быстрый браузер, похожий на <code>phantom.js</code>, однако использует движок <code>Gecko</code> от <code>firefox</code>. Управляется при помощи <code>javascript api</code>.</li>
 </ul>
 
 <p>Итак, участники отобраны, и готовы показать себя во всей красе, что ж &mdash; приступим к соревнованиям.</p>
@@ -95,7 +95,7 @@
 <span class="pl-s">url=<span class="pl-c1">{url}</span>&amp;width=<span class="pl-c1">{res}</span>&amp;render_all=1&amp;wait=1<span class="pl-pds">'</span></span>.format(<span class="pl-smi">url</span><span class="pl-k">=</span>url, <span class="pl-smi">res</span><span class="pl-k">=</span>res)
 res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span class="pl-pds">'</span>curl<span class="pl-pds">'</span></span>, request, <span class="pl-s"><span class="pl-pds">'</span>-o<span class="pl-pds">'</span></span>, save_as])</pre></div>
 
-<p>Однако, как оказалось, ширина окна браузера всегда 1024px, а параметр <code>width</code> влияет только на фактическую ширину полученного изображения, к тому же сжатого как thumbnail.</p>
+<p>Однако, как оказалось, ширина окна браузера всегда <code>1024px</code>, а параметр <code>width</code> влияет только на фактическую ширину полученного изображения, к тому же сжатого как thumbnail.</p>
 
 <blockquote>
     <p>240px<br><img src="im/splash.png" alt="splash" class="screenshot"></p>
@@ -103,7 +103,7 @@ res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span 
     <p>780px<br><img src="im/splash_big.png" alt="splash big" class="screenshot"></p>
 </blockquote>
 
-<p>Так что splash не прошел данный этап.</p>
+<p>Так что <code>splash</code> не прошел данный этап.</p>
 
 <h4>&laquo;Что я вообще сдесь делаю&raquo; &copy; Zombie</h4>
 
@@ -115,7 +115,7 @@ res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span 
 
 <p>Некоторые из участников соревнований, а именно <code>Phantom.js</code> и <code>Slimer.js</code>, не смогли бы пройти все этапы ралли, под своими именами, поэтому пришлось выдать им фальшивые паспорта.</p>
 
-<p>Google выдает различные версии сайта, в зависимости от того: какой user agent у браузера запрашивающего страницу, и если этот агент неизвестный или старый, то выдается старая версия гугл, с черной полоской меню.</p>
+<p>Google выдает различные версии сайта, в зависимости от того: какой <code>user agent</code> у браузера запрашивающего страницу, и если этот агент неизвестный или старый, то выдается старая версия гугл, с черной полоской меню.</p>
 
 <blockquote>
     <p>Phantom.js 240px<br><img src="im/old_google_phantom.png" alt="old google" class="screenshot"></p>
@@ -161,7 +161,7 @@ res <span class="pl-k">=</span> subprocess.check_call([<span class="pl-s"><span 
 
 <p><img src="im/speed.jpg" alt="speed"></p>
 
-<p>На данном этапе измерялось время, необходимое для создания браузера, открытия нужной страницы, изменения ширины окна до заданной, сохранения страницы как изображения PNG, закрытия страницы и уничтожения объекта браузера.</p>
+<p>На данном этапе измерялось время, необходимое для создания браузера, открытия нужной страницы, изменения ширины окна до заданной, сохранения страницы как изображения <code>PNG</code>, закрытия страницы и уничтожения объекта браузера.</p>
 
 <p>Измерения проводились при помощи стандартной библиотеки <code>time</code>, как разница времени между началом запуска функции и её окончания.</p>
 
@@ -302,7 +302,7 @@ page.<span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">'</
         phantom.exit();
 });</pre></div>
 
-<p>В python запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
+<p>В <code>python</code> запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
 
 <div class="highlight highlight-python"><pre><span class="pl-k">import</span> subprocess
 <span class="pl-c"># ...</span>
@@ -324,7 +324,7 @@ page.<span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">'</
         slimer.exit();
 });</pre></div>
 
-<p>В python запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
+<p>В <code>python</code> запускаем браузер с помощью стандартной библиотеки <code>subprocess</code>.</p>
 
 <div class="highlight highlight-python"><pre><span class="pl-k">from</span> pyvirtualdisplay <span class="pl-k">import</span> Display
 <span class="pl-k">import</span> subprocess
